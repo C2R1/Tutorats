@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
+\usepackage{url}
 
 %opening
 \title{Tutorat Git}
@@ -9,9 +10,46 @@
 
 \begin{document}
 
-
 \newpage
 
-\section{}
-
+\section{Introduction}
+  \subsection{Histoire}
+    \subsubsection{Versionnage de code?}
+Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
+    \subsubsection{Outils de versionnage}
+Il existe de nombreux outils de versionnage de code. Les 3 plus connus sont sans doute Git, Mercurial et SVN.
+      \paragraph{SVN (subversion)}
+Ce fut le plus utilisé pendant longtemps. Développé par la fondation Apache, il s'agit d'une amélioration d'un programme nommé CVS (très peu utilisé aujourd'hui). Le plus gros problème de SVN est qu'il s'agit d'un système centralisé. Un serveur contient donc le code, des clients travaillent dessus. Il n'y a qu'un seul versionning.
+      \paragraph{Mercurial}
+Contrairement à SVN, il s'agit d'un système décentralisé. Chacun possède son propre repository et publie son code sur le repository public. Une autre différence avec SVN est qu'il utilise la notion de changeset. C'est à dire qu'il préfère garder en mémoire les changements appliqués que les versions des fichiers.
+      \paragraph{Git}
+Git possède très peu de différences avec Mercurial, mais l'histoire a fait qu'il c'est plus imposé que mercurial (qui est quand meme utilisé dans pas mal de projets dont ceux de Mozilla, même si git est possible). C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
+Pour plus d'informations sur les différences vous pouvez vous référer à ces articles : \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
+  \subsection{Installation}
+    \subsubsection{Windows}
+Lancez le programme que vous pouvez trouver sur cette page : http://msysgit.github.io
+    \subsubsection{Linux}
+\verb|apt-get install git| ou \verb| yum install git| selon la distribution
+    \subsubsection{Mac OS}
+\verb|sudo port install git-core +svn +doc +bash_completion +gitweb|
+  \subsection{Github/Gitlab}
+Pour la suite de ce tutorat, il vous faut créer un compte github : \url{https://github.com/}.
+Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
+\section{Manipulation basique de git}
+  \subsection{Premier commit}
+     \subsubsection{créer le dépot}
+     \subsubsection{pull}
+     \subsubsection{readme}
+     \subsubsection{add/diff/ignore/commit}
+     \subsubsection{push}
+  \subsection{Historique}
+\section{Manipulation avancée}
+  \subsection{Méthode de développement}
+  \subsection{branch}
+     \subsubsection{créer sa branche}
+     \subsubsection{fusionner}
+     \subsubsection{résoudre un conflit}
+     \subsubsection{savoir qui a fait quoi}
+  \subsection{Se positionner sur un commit}
+  \subsection{Contribuer à un autre repository}
 \end{document}
