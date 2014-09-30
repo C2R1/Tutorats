@@ -42,8 +42,7 @@
 \chapter{Introduction}
   \section{Histoire}
     \subsection{Versionnage de code?}
-Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finie.s
-%Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
+Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finie.
     \subsection{Outils de versionnage}
 Il existe de nombreux outils de versionnage de code. Les 3 plus connus sont sans doute Git, Mercurial et SVN.
       \subsubsection{SVN (subversion)}
@@ -70,11 +69,23 @@ Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
 \chapter{Manipulation basique de git}
   \section{D\'ebut du projet}
     \subsection{Cr\'eer le d\'ep\^ot}
-Pour cr\'eer le d\'ep\^ot, il faut initialiser un dossier. Ceci se fait avec la commande \verb|git init|. Ensuite, il faut cr\'eer le d\'ep\^ot sur le serveur.\\
-Sur Github, ceci se fait avec un formulaire, accessible en cliquant sur le bouton \emph{create repository}
-\begin{figure}
- \includegraphics[scale=0.5]{images/createRepoForm}
+Pour cr\'eer le d\'ep\^ot, il faut initialiser un dossier. Ceci se fait avec la commande \verb|git init| (cette \'etape est optionnelle avec github). Ensuite, il faut cr\'eer le d\'ep\^ot sur le serveur.\\
+Sur Github, ceci se fait avec un formulaire, accessible en cliquant sur le bouton \emph{create repository}, \`a c\^ot\'e de la liste des d\'ep\^ots d\'ej\`a existants.\\
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/createRepoForm}
+    \caption{Formulaire de cr\'eation de d\'ep\^ot}
+    \label{creationRepo}
+  \end{center}
 \end{figure}
+
+Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creationRepo}), qui nous demande~:
+\begin{itemize}
+ \item le nom du d\'ep\^ot (\emph{Repository name})\\
+ \item une description (optionnelle)\\
+ \item s'il faut initialiser le d\'ep\^ot (\`a ne pas cocher si vous avez fait \verb|git init|).
+\end{itemize}
+
 
 \subsection{R\'ecup\'erer un d\'ep\^ot existant}
   \section{Premier commit}
@@ -101,7 +112,6 @@ index b796d13..3847b93 100644
      setVibrationEnabledCount++;
      SettingsListener.getSettingsLock().set({
        'vibration.enabled': enabled
-    
 \end{verbatim}   
      On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
      \subsection{push}
@@ -113,10 +123,11 @@ index b796d13..3847b93 100644
      \subsection{fusionner}
      \subsection{résoudre un conflit}
      \subsection{savoir qui a fait quoi}
-  \section{Supprimer un commit
-  Pour supprimer un commit, il suffit de faire git revert n° du commit.
+  \section{Supprimer un commit}
+  Pour supprimer un commit, il suffit de faire git revert n\no du commit.
 Exemple :
-la commande hg log nous donne.
+\begin{verbatim}
+>>git log
 "commit c610b4bbc6d631b798f158d2b999f0d0d0e108a4
 Author: AmarOk1412 <amarok@enconn.fr>
 Date:   Tue Sep 30 09:26:40 2014 +0200
@@ -147,9 +158,10 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 
     Initial commit
 "
-git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc nous supprimer le fichier README qui a été créé pendant ce commit.}
+git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc nous supprimer le fichier README qui a été créé pendant ce commit.
+\end{verbatim}
   \section{Se positionner sur un commit}
-  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout n° du commit (git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b par exemple) pour se placer sur un commit précis.
+  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout n\no du commit (git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b par exemple) pour se placer sur un commit précis.
   (Schéma + explication du fonctionnement du pointeur HEAD)
   \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 

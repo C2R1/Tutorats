@@ -14,12 +14,12 @@
 \contentsline {chapter}{\numberline {2}Manipulation basique de git}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}D\'ebut du projet}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Cr\'eer le d\'ep\^ot}{4}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}R\'ecup\'erer un d\'ep\^ot existant}{4}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Premier commit}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}pull}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}readme}{4}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}add/diff/ignore/commit}{4}{subsection.2.2.3}
-\contentsline {subsubsection}{git diff}{4}{section*.5}
+\contentsline {subsection}{\numberline {2.1.2}R\'ecup\'erer un d\'ep\^ot existant}{5}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Premier commit}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}pull}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}readme}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}add/diff/ignore/commit}{5}{subsection.2.2.3}
+\contentsline {subsubsection}{git diff}{5}{section*.5}
 \contentsline {subsection}{\numberline {2.2.4}push}{5}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Historique}{5}{section.2.3}
 \contentsline {chapter}{\numberline {3}Manipulation avanc\IeC {\'e}e}{6}{chapter.3}
@@ -29,5 +29,6 @@
 \contentsline {subsection}{\numberline {3.2.2}fusionner}{6}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}r\IeC {\'e}soudre un conflit}{6}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}savoir qui a fait quoi}{6}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Se positionner sur un commit}{6}{section.3.3}
-\contentsline {section}{\numberline {3.4}Contribuer \IeC {\`a} un autre repository}{6}{section.3.4}
+\contentsline {section}{\numberline {3.3}Supprimer un commit}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Se positionner sur un commit}{7}{section.3.4}
+\contentsline {section}{\numberline {3.5}Contribuer \IeC {\`a} un autre repository}{7}{section.3.5}

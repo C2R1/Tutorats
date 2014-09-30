@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.29)  30 SEP 2014 12:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.29)  30 SEP 2014 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -500,7 +500,7 @@ LaTeX Info: Redefining \nameref on input line 18.
 \@outlinefile=\write3
 \openout3 = `tutoratGit.out'.
 
- <C2R1.png, id=116, 401.5pt x 401.5pt>
+ <C2R1.png, id=120, 401.5pt x 401.5pt>
 File: C2R1.png Graphic file (type png)
 
 <use C2R1.png>
@@ -532,78 +532,105 @@ l.40 \newpage
 ]
 Partie 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 58.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 57.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (12.6629pt too wide) in paragraph at lines 58--59
+Overfull \hbox (12.6629pt too wide) in paragraph at lines 57--58
 \T1/cmtt/m/n/10 08 / 07 / git-[]vs-[]mercurial/$[]\T1/cmr/m/n/10 , []$\T1/cmtt/
 m/n/10 http : / / www . rockstarprogrammer . org / post / 2008 /
  []
 
 [3]
 Partie 2.
-<images/createRepoForm.png, id=186, 798.985pt x 484.81125pt>
+<images/createRepoForm.png, id=191, 798.985pt x 484.81125pt>
 File: images/createRepoForm.png Graphic file (type png)
 
 <use images/createRepoForm.png>
 Package pdftex.def Info: images/createRepoForm.png used on input line 76.
-(pdftex.def)             Requested size: 399.49152pt x 242.40503pt.
+(pdftex.def)             Requested size: 239.69734pt x 145.44449pt.
 
-Overfull \hbox (54.49152pt too wide) in paragraph at lines 76--77
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
  []
 
 
-Overfull \hbox (90.64362pt too wide) in paragraph at lines 105--105
-[]     \T1/cmtt/m/n/10 diff --git a/apps/system/js/sound_manager.js b/apps/syst
-em/js/sound_manager.js[] 
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
  []
 
 [4
 
-] [5 <./images/createRepoForm.png>]
+ <./images/createRepoForm.png>]
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 115--115
+[]     \T1/cmtt/m/n/10 diff --git a/apps/system/js/sound_manager.js b/apps/syst
+em/js/sound_manager.js[] 
+ []
+
+[5]
 Partie 3.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
+(Font)              size <6> substituted on input line 127.
+
+
+Overfull \hbox (8.08408pt too wide) in paragraph at lines 127--129
+[]\T1/cmr/m/n/10 Pour sup-pri-mer un com-mit, il suf-fit de faire git re-vert n
+n[]du com-mit. Exemple : 
+ []
+
 [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Overfull \hbox (316.3385pt too wide) in paragraph at lines 162--162
+[]\T1/cmtt/m/n/10 git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc n
+ous supprimer le fichier README qui a été créé pendant ce commit.[] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
  (./tutoratGit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `tutoratGit.out' has not changed.
-(rerunfilecheck)             Checksum: 907301CABF5B06F931FEB2860ECFD0AF;1865.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
+(rerunfilecheck)             Checksum: 988C6081A7D5F1D11DC6208D87145679;1931.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.49994pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 6565 strings out of 493304
- 94245 string characters out of 6139871
- 185677 words of memory out of 5000000
- 9911 multiletter control sequences out of 15000+600000
- 22763 words of font info for 33 fonts, out of 8000000 for 9000
+ 6577 strings out of 493304
+ 94379 string characters out of 6139871
+ 185737 words of memory out of 5000000
+ 9917 multiletter control sequences out of 15000+600000
+ 24202 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,10n,43p,465b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,43p,465b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/c
 m-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvr8a.pfb>
-Output written on tutoratGit.pdf (7 pages, 224566 bytes).
+-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on tutoratGit.pdf (8 pages, 242745 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
