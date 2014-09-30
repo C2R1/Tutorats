@@ -127,7 +127,62 @@ index b796d13..3847b93 100644
      Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande git branch. Une autre méthode plus rapide et d'utiliser git checkout -b nomDeLaBranche qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser git checkout nomDeLaBranche.
      \subsection{fusionner}
      Pour fusionner deux branches, il faut utiliser git merge.
-     Parler des options -s (stratégie, par exemple avec -s ours) et --no-ff par exemple, si on veut écraser une branche avec une autre.
+     Exemple : On veut écraser une branche par une autre.
+     1/ On se place dans le repository. Ici, il contient un dossier git et un fichier README.md
+     [AmarOk@AmarOkPC repo]$ ls
+git  README.md
+     2/ On regarde l'historique pour chercher sur quel commit on veut se placer (ici initial commit)
+[AmarOk@AmarOkPC repo]$ git log
+commit dcf387590eaf281c10ee7f989a690c223d0b125a
+Author: AmarOk1412 <amarok@enconn.fr>
+Date:   Tue Sep 30 13:11:15 2014 +0200
+
+    git log
+
+commit 2986c83edc7ca9f1bcbc565fbe13a14091005b1f
+Author: n0m1s <n0m1s@homnomnom.fr>
+Date:   Tue Sep 30 13:04:14 2014 +0200
+
+    creation du depot
+
+...
+
+commit f1b4c0ebf59da0af7d782303f52bdae86c3d257b
+Author: AmarOk1412 <amarok@enconn.fr>
+Date:   Mon Sep 29 22:45:53 2014 +0200
+
+    Initial commit
+    
+    3/ On se place sur le commit. Et on créer une branche (ici on la nomme delta).
+[AmarOk@AmarOkPC repo]$ git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b
+[AmarOk@AmarOkPC repo]$ git checkout -b delta
+Basculement sur la nouvelle branche 'delta'
+[AmarOk@AmarOkPC repo]$ git branch
+* delta
+  master
+    4/ On effectue quelques modifications et on les commit
+[AmarOk@AmarOkPC repo]$ echo someDiff > README.md 
+[AmarOk@AmarOkPC repo]$ git commit README.md -m "exemple"
+[delta e1e999e] exemple
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+    5/ Sur la branche qu'on souhaite garder on merge master avec une stratégie dite ours (ours
+           This resolves any number of heads, but the resulting tree of the merge is always that of the current branch head, effectively ignoring
+           all changes from all other branches. It is meant to be used to supersede old development history of side branches. Note that this is
+           different from the -Xours option to the recursive merge strategy.
+)
+[AmarOk@AmarOkPC repo]$ git merge -s ours master -m "ours attack"
+Merge made by the 'ours' strategy.
+    6/ On se place sur la branche que l'on souhaite écraser (master ici). 
+[AmarOk@AmarOkPC repo]$ git checkout master
+Basculement sur la branche 'master'
+Votre branche est à jour avec 'origin/master'.
+    7/ Et on merge delta sur master
+[AmarOk@AmarOkPC repo]$ git merge --no-ff delta 
+Message des modifications
+    8/ Et voilà, delta a écrasé master.
+[AmarOk@AmarOkPC repo]$ ls
+README.md
+
      \subsection{résoudre un conflit}
      \subsection{savoir qui a fait quoi}
      Pour savoir qui a fait quoi, il suffit de faire git log. On a alors accès à l'historique. un commit se présente de la forme : 
