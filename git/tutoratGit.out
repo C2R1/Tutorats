@@ -1,26 +1,28 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Histoire}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Versionnage de code?}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{Outils de versionnage}{subsection.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.2}{Installation}{section.1}% 5
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Windows}{subsection.1.2}% 6
-\BOOKMARK [3][-]{subsubsection.1.2.2}{Linux}{subsection.1.2}% 7
-\BOOKMARK [3][-]{subsubsection.1.2.3}{Mac OS}{subsection.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.3}{Github/Gitlab}{section.1}% 9
-\BOOKMARK [1][-]{section.2}{Manipulation basique de git}{}% 10
-\BOOKMARK [2][-]{subsection.2.1}{Premier commit}{section.2}% 11
-\BOOKMARK [3][-]{subsubsection.2.1.1}{cr\351er le d\351pot}{subsection.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.1.2}{pull}{subsection.2.1}% 13
-\BOOKMARK [3][-]{subsubsection.2.1.3}{readme}{subsection.2.1}% 14
-\BOOKMARK [3][-]{subsubsection.2.1.4}{add/diff/ignore/commit}{subsection.2.1}% 15
-\BOOKMARK [3][-]{subsubsection.2.1.5}{push}{subsection.2.1}% 16
-\BOOKMARK [2][-]{subsection.2.2}{Historique}{section.2}% 17
-\BOOKMARK [1][-]{section.3}{Manipulation avanc\351e}{}% 18
-\BOOKMARK [2][-]{subsection.3.1}{M\351thode de d\351veloppement}{section.3}% 19
-\BOOKMARK [2][-]{subsection.3.2}{branch}{section.3}% 20
-\BOOKMARK [3][-]{subsubsection.3.2.1}{cr\351er sa branche}{subsection.3.2}% 21
-\BOOKMARK [3][-]{subsubsection.3.2.2}{fusionner}{subsection.3.2}% 22
-\BOOKMARK [3][-]{subsubsection.3.2.3}{r\351soudre un conflit}{subsection.3.2}% 23
-\BOOKMARK [3][-]{subsubsection.3.2.4}{savoir qui a fait quoi}{subsection.3.2}% 24
-\BOOKMARK [2][-]{subsection.3.3}{Se positionner sur un commit}{section.3}% 25
-\BOOKMARK [2][-]{subsection.3.4}{Contribuer \340 un autre repository}{section.3}% 26
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Histoire}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Versionnage de code?}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Outils de versionnage}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Installation}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.2.1}{Windows}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{Linux}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.3}{Mac OS}{section.1.2}% 8
+\BOOKMARK [1][-]{section.1.3}{Github/Gitlab}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Manipulation basique de git}{}% 10
+\BOOKMARK [1][-]{section.2.1}{D\351but du projet}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.1.1}{Cr\351er le d\351p\364t}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{R\351cup\351rer un d\351p\364t existant}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{Premier commit}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{pull}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.2}{readme}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.3}{add/diff/ignore/commit}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.4}{push}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Historique}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Manipulation avanc\351e}{}% 20
+\BOOKMARK [1][-]{section.3.1}{M\351thode de d\351veloppement}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{branch}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.2.1}{cr\351er sa branche}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.2}{fusionner}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.3}{r\351soudre un conflit}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.4}{savoir qui a fait quoi}{section.3.2}% 26
+\BOOKMARK [1][-]{section.3.3}{Se positionner sur un commit}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Contribuer \340 un autre repository}{chapter.3}% 28

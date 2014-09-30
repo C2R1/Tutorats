@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10pt]{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
@@ -16,6 +16,7 @@
 \rhead{page \thepage}
 
 \begin{document}
+\renewcommand{\chaptername}{Partie}
 
 \begin{titlepage}
 \vspace{-3cm}\hspace{-2cm}\includegraphics[scale=0.4]{C2R1}
@@ -38,41 +39,45 @@
 \tableofcontents
 \newpage
 
-\section{Introduction}
-  \subsection{Histoire}
-    \subsubsection{Versionnage de code?}
+\chapter{Introduction}
+  \section{Histoire}
+    \subsection{Versionnage de code?}
 Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finie.s
 %Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
-    \subsubsection{Outils de versionnage}
+    \subsection{Outils de versionnage}
 Il existe de nombreux outils de versionnage de code. Les 3 plus connus sont sans doute Git, Mercurial et SVN.
-      \paragraph{SVN (subversion)~:}
+      \subsubsection{SVN (subversion)}
 Ce fut le plus utilisé pendant longtemps. Développé par la fondation Apache, il s'agit d'une amélioration d'un programme nommé CVS (très peu utilisé aujourd'hui). Le plus gros problème de SVN est qu'il s'agit d'un système centralisé. Un serveur contient donc le code, des clients travaillent dessus. Il n'y a qu'un seul versionning. C'est le gestionnaire de version utilis\'e notamment par Apache, freeBSD et sourceforge.
-      \paragraph{Mercurial~:}
+      \subsubsection{Mercurial}
 Contrairement à SVN, il s'agit d'un système décentralisé. Chacun possède son propre \emph{repository} et publie son code sur le \emph{repository} public. Une autre différence avec SVN est qu'il utilise la notion de changeset. C'est à dire qu'il préfère garder en mémoire les changements appliqués que les versions des fichiers. Il est utilis\'e notamment par Mozilla (Firefox, Thunderbird, ...), Facebook, et adblock plus.
-      \paragraph{Git~:}
+      \subsubsection{Git}
 Git possède très peu de différences avec Mercurial, mais l'histoire a fait qu'il c'est plus imposé.
 C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
 C'est le gestionnaire de version utilis\'e par l'\'equipe de d\'eveloppeurs du noyeau linux.\\
 
 Pour plus d'informations sur les différences entre mercurial et Git, vous pouvez vous référer à ces articles~: \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
-  \subsection{Installation}
-    \subsubsection{Windows}
+  \section{Installation}
+    \subsection{Windows}
 Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit.github.io} ou \url{http://www.git-scm.com/}
-    \subsubsection{Linux}
+    \subsection{Linux}
 \verb|apt-get install git| ou \verb|yum install git| selon la distribution
-    \subsubsection{Mac OS}
+    \subsection{Mac OS}
 \verb|sudo port install git-core +svn +doc +bash_completion +gitweb|
-  \subsection{Github/Gitlab}
+  \section{Github/Gitlab}
 Pour la suite de ce tutorat, il vous faut créer un compte github : \url{https://github.com/}.
 Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
-\section{Manipulation basique de git}
-  \subsection{Premier commit}
-     \subsubsection{créer le dépot}
-     \subsubsection{pull}
-     \subsubsection{readme}
+
+\chapter{Manipulation basique de git}
+  \section{D\'ebut du projet}
+    \subsection{Cr\'eer le d\'ep\^ot}
+Pour cr\'eer le d\'ep\^ot, il y a deux mani\`eres~:
+    \subsection{R\'ecup\'erer un d\'ep\^ot existant}
+  \section{Premier commit}
+     \subsection{pull}
+     \subsection{readme}
      Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
-     \subsubsection{add/diff/ignore/commit}
-\paragraph{git diff} : montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+     \subsection{add/diff/ignore/commit}
+\subsubsection{git diff} : montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
      diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
 index b796d13..3847b93 100644
@@ -94,17 +99,17 @@ index b796d13..3847b93 100644
     
 \end{verbatim}   
      On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
-     \subsubsection{push}
-  \subsection{Historique}
-\section{Manipulation avancée}
-  \subsection{Méthode de développement}
-  \subsection{branch}
-     \subsubsection{créer sa branche}
-     \subsubsection{fusionner}
-     \subsubsection{résoudre un conflit}
-     \subsubsection{savoir qui a fait quoi}
-  \subsection{Se positionner sur un commit}
-  \subsection{Contribuer à un autre repository}
+     \subsection{push}
+  \section{Historique}
+\chapter{Manipulation avancée}
+  \section{Méthode de développement}
+  \section{branch}
+     \subsection{créer sa branche}
+     \subsection{fusionner}
+     \subsection{résoudre un conflit}
+     \subsection{savoir qui a fait quoi}
+  \section{Se positionner sur un commit}
+  \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
 * Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
 * Coder
