@@ -5,6 +5,16 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\fancyhf{}
+
+\title{Tutorat Git}
+
+\lhead{C2R1}
+\chead{Tutorat Git}
+\rhead{page \thepage}
+
 
 \begin{document}
 
@@ -17,13 +27,14 @@
 \vspace{0.5cm}
 \Huge{Tutorat Git}}\\
 \end{center}
-\vfill
+\begin{flushright}
+ \vfill
 {\fontfamily{phv}\selectfont
 \large{Version du \today}}
-
+\end{flushright}
 \end{titlepage}
 
-\newpage
+\pagestyle{fancy}
 
 \section{Introduction}
   \subsection{Histoire}
