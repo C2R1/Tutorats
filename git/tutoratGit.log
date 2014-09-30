@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.29)  30 SEP 2014 13:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.29)  30 SEP 2014 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -566,10 +566,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
 [4
 
  <./images/createRepoForm.png>]
-Overfull \hbox (90.64362pt too wide) in paragraph at lines 115--115
+Overfull \hbox (16.80054pt too wide) in paragraph at lines 92--94
+\T1/cmr/m/n/10 Ainsi, pour notre exemple : []\T1/cmtt/m/n/10 git clone https://
+github.com/C2R1/Tutorats.git\T1/cmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 119--119
 []     \T1/cmtt/m/n/10 diff --git a/apps/system/js/sound_manager.js b/apps/syst
 em/js/sound_manager.js[] 
  []
@@ -578,10 +589,10 @@ em/js/sound_manager.js[]
 Partie 3.
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
-(Font)              size <6> substituted on input line 127.
+(Font)              size <6> substituted on input line 131.
 
 
-Overfull \hbox (8.08408pt too wide) in paragraph at lines 127--129
+Overfull \hbox (8.08408pt too wide) in paragraph at lines 131--133
 []\T1/cmr/m/n/10 Pour sup-pri-mer un com-mit, il suf-fit de faire git re-vert n
 n[]du com-mit. Exemple : 
  []
@@ -589,17 +600,17 @@ n[]du com-mit. Exemple :
 [6
 
 ]
-Overfull \hbox (316.3385pt too wide) in paragraph at lines 162--162
+Overfull \hbox (316.3385pt too wide) in paragraph at lines 166--166
 []\T1/cmtt/m/n/10 git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc n
 ous supprimer le fichier README qui a été créé pendant ce commit.[] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
 [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
  (./tutoratGit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `tutoratGit.out' has not changed.
 (rerunfilecheck)             Checksum: 988C6081A7D5F1D11DC6208D87145679;1931.
 
@@ -607,7 +618,7 @@ Package rerunfilecheck Info: File `tutoratGit.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.49994pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
  6577 strings out of 493304
@@ -627,10 +638,10 @@ onts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm
 nts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on tutoratGit.pdf (8 pages, 242745 bytes).
+Output written on tutoratGit.pdf (8 pages, 245773 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
  43 named destinations out of 1000 (max. 500000)
  243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
