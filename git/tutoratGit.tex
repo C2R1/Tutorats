@@ -99,8 +99,14 @@ une fois que l'on a le d\'ep\^ot clon\'e sur son ordinateur, on peut commencer \
      \subsection{R\'ecup\'erer les modifications depuis le serveur}
 Pour r\'ecup\'erer les modifications, il faut utiliser la commande \verb|git pull|.
      \subsection{Envoyer les modifications vers le serveur}
-Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git 
-     \subsection{add/diff/ignore/commit}
+Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git les fichiers qui ont \'et\'es ajout\'es depuis la derni\`ere modification. Ceci se fait avec la commande \verb|git add <fichiers>|. Par exemple, pour ajouter tous les nouveaux fichiers, on peut utiliser \verb|git add *|.\\
+
+Ensuite, il faut ``enregistrer'' les modifications localement. On dit alors qu'on \emph{commit} les changements. La commande est donc \verb|git commit <fichiers>|, en sp\'ecifiant les fichier \`a \emph{commit}. Pour enregistrer les modifications de tous les fichiers, on utilise l'option \verb|-a| (pour \emph{all}), et ainsi~: \verb|git commit -a|.\\
+Durant un commit, il faut expliquer les changements effectu\'es. C'est l'utilit\'e du \emph{commit message}. On peut sp\'ecifier ce message en utilisant l'option \verb|-m <message>|. soit~: \verb|git commit -m <message>|.\\
+Si l'on ne sp\'ecifie pas de message avec l'option \verb|-m|, \verb|git| lancera un \'editeur de texte (\verb|vi| par d\'efaut) pour \'ecrire le message. En cas de message vide, le commit ne peut se faire.\\
+
+Enfin, il faut envoyer ses modifications au serveur. C'est l'utilit\'e de la commande \verb|git push|.
+     \subsection{diff/ignore}
 montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
      diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
@@ -175,10 +181,10 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 
     Initial commit
 "
-git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc nous supprimer le fichier README qui a été créé pendant ce commit.
 \end{verbatim}
+\verb|git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b| va donc nous supprimer le fichier README qui a été créé pendant ce commit.
   \section{Se positionner sur un commit}
-  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b par exemple) pour se placer sur un commit précis.
+  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (\verb|git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b| par exemple) pour se placer sur un commit précis.
   (Schéma + explication du fonctionnement du pointeur HEAD)
   \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
