@@ -81,8 +81,8 @@ Sur Github, ceci se fait avec un formulaire, accessible en cliquant sur le bouto
 
 Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creationRepo}), qui nous demande~:
 \begin{itemize}
- \item le nom du d\'ep\^ot (\emph{Repository name})\\
- \item une description (optionnelle)\\
+ \item le nom du d\'ep\^ot (\emph{Repository name})
+ \item une description (optionnelle)
  \item s'il faut initialiser le d\'ep\^ot (\`a ne pas cocher si vous avez fait \verb|git init|).
 \end{itemize}
 
@@ -105,7 +105,23 @@ Ensuite, il faut ``enregistrer'' les modifications localement. On dit alors qu'o
 Durant un commit, il faut expliquer les changements effectu\'es. C'est l'utilit\'e du \emph{commit message}. On peut sp\'ecifier ce message en utilisant l'option \verb|-m <message>|. soit~: \verb|git commit -m <message>|.\\
 Si l'on ne sp\'ecifie pas de message avec l'option \verb|-m|, \verb|git| lancera un \'editeur de texte (\verb|vi| par d\'efaut) pour \'ecrire le message. En cas de message vide, le commit ne peut se faire.\\
 
-Enfin, il faut envoyer ses modifications au serveur. C'est l'utilit\'e de la commande \verb|git push|.
+Enfin, il faut envoyer ses modifications au serveur. C'est l'utilit\'e de la commande \verb|git push|. \\
+
+Par exemple, pour ``dire'' au serveur qu'on a ajout\'e le fichier \verb|c2r1.dtc|, on utilisera la suite de commande~:
+\begin{verbatim}
+>> git add c2r1.dtc
+>> git commit -am "ajout du fichier c2r1.dtc"
+>> git push
+\end{verbatim}
+
+Soit~:
+\begin{itemize}
+ \item On ``avertit'' git qu'on ajoute le fichier,
+ \item On \emph{commit} les changements de tous les fichiers (\verb|a|), avec un message (\verb|m|),
+ \item On envoie les modifications au serveur.
+\end{itemize}
+
+
      \subsection{diff/ignore}
 montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
