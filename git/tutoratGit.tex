@@ -128,7 +128,10 @@ index b796d13..3847b93 100644
   \section{Méthode de développement}
   \section{branch}
      \subsection{créer sa branche}
+     Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande git branch. Une autre méthode plus rapide et d'utiliser git checkout -b nomDeLaBranche qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser git checkout nomDeLaBranche.
      \subsection{fusionner}
+     Pour fusionner deux branches, il faut utiliser git merge.
+     Parler des options -s (stratégie, par exemple avec -s ours) et --no-ff par exemple, si on veut écraser une branche avec une autre.
      \subsection{résoudre un conflit}
      \subsection{savoir qui a fait quoi}
      Pour savoir qui a fait quoi, il suffit de faire git log. On a alors accès à l'historique. un commit se présente de la forme : 
