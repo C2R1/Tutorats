@@ -73,7 +73,7 @@ Pour cr\'eer le d\'ep\^ot, il faut initialiser un dossier. Ceci se fait avec la 
 Sur Github, ceci se fait avec un formulaire, accessible en cliquant sur le bouton \emph{create repository}, \`a c\^ot\'e de la liste des d\'ep\^ots d\'ej\`a existants.\\
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[scale=0.4]{images/createRepoForm}
+    \includegraphics[scale=0.3]{images/createRepoForm}
     \caption{Formulaire de cr\'eation de d\'ep\^ot}
     \label{creationRepo}
   \end{center}
@@ -83,16 +83,25 @@ Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creati
 \begin{itemize}
  \item le nom du d\'ep\^ot (\emph{Repository name})\\
  \item une description (optionnelle)\\
+ \item s'il faut initialiser le d\'ep\^ot (\`a ne pas cocher si vous avez fait \verb|git init|).
 \end{itemize}
 
+    \subsection{R\'ecup\'erer un d\'ep\^ot existant}
+Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette addresse sur la page du d\'ep\^ot sur github, sous le nopm \emph{HTTPS clone URL}.\\
 
-\subsection{R\'ecup\'erer un d\'ep\^ot existant}
+il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot, et effectuer la commande \verb|git clone <URL>|.\\
+Ainsi, pour notre exemple~: \verb|git clone https://github.com/C2R1/Tutorats.git|.
+
+    \subsection{readme}
+Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
   \section{Premier commit}
-     \subsection{pull}
-     \subsection{readme}
-     Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
+une fois que l'on a le d\'ep\^ot clon\'e sur son ordinateur, on peut commencer \`a coder. Cependant, les modifications ne se font pas en temps r\'eel sur le serveur. Ainsi, il faut connaitre quelques commandes pour r\'ecup\'erer les modifications faites par les autres d\'eveloppeurs, et pouvoir leur envoyer nos modifications.
+     \subsection{R\'ecup\'erer les modifications depuis le serveur}
+Pour r\'ecup\'erer les modifications, il faut utiliser la commande \verb|git pull|.
+     
      \subsection{add/diff/ignore/commit}
-\subsubsection{git diff} : montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+\subsubsection{git diff}
+montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
      diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
 index b796d13..3847b93 100644
@@ -122,8 +131,14 @@ index b796d13..3847b93 100644
      \subsection{fusionner}
      \subsection{résoudre un conflit}
      \subsection{savoir qui a fait quoi}
+     Pour savoir qui a fait quoi, il suffit de faire git log. On a alors accès à l'historique. un commit se présente de la forme : 
+     "commit \no commit
+Author: Auteur <mail>
+Date:   Date
+
+    message du commit"
   \section{Supprimer un commit}
-  Pour supprimer un commit, il suffit de faire git revert n\no du commit.
+  Pour supprimer un commit, il suffit de faire git revert \no du commit.
 Exemple :
 \begin{verbatim}
 >>git log
@@ -160,7 +175,7 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc nous supprimer le fichier README qui a été créé pendant ce commit.
 \end{verbatim}
   \section{Se positionner sur un commit}
-  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout n\no du commit (git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b par exemple) pour se placer sur un commit précis.
+  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b par exemple) pour se placer sur un commit précis.
   (Schéma + explication du fonctionnement du pointeur HEAD)
   \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
