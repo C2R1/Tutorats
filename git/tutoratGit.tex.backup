@@ -5,35 +5,51 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
 
-%opening
+\fancyhf{}
+
 \title{Tutorat Git}
-\author{Amaury \textesc{Louarn}}
+
+\lhead{C2R1}
+\chead{Tutorat Git}
+\rhead{page \thepage}
 
 \begin{document}
 
 \begin{titlepage}
-\includegraphics[height=5cm]{C2R1} \hfill \includegraphics[height=5cm]{git}
+\vspace{-3cm}\hspace{-2cm}\includegraphics[scale=0.4]{C2R1}
 \begin{center}
+\vspace{2cm}
+{\fontfamily{phv}\selectfont
 \Large{C2R1}\\
-\huge{Tutorat Git}
+\vspace{0.5cm}
+\Huge{Tutorat Git}}\\
 \end{center}
-
+\begin{flushright}
+ \vfill
+{\fontfamily{phv}\selectfont
+\large{Version du \today}}
+\end{flushright}
 \end{titlepage}
 
+\pagestyle{fancy}
+
+\tableofcontents
 \newpage
 
 \section{Introduction}
   \subsection{Histoire}
     \subsubsection{Versionnage de code?}
-Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
+Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finie.s
+%Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
     \subsubsection{Outils de versionnage}
 Il existe de nombreux outils de versionnage de code. Les 3 plus connus sont sans doute Git, Mercurial et SVN.
-      \paragraph{SVN (subversion)}
+      \paragraph{SVN (subversion)~:}
 Ce fut le plus utilisé pendant longtemps. Développé par la fondation Apache, il s'agit d'une amélioration d'un programme nommé CVS (très peu utilisé aujourd'hui). Le plus gros problème de SVN est qu'il s'agit d'un système centralisé. Un serveur contient donc le code, des clients travaillent dessus. Il n'y a qu'un seul versionning.
-      \paragraph{Mercurial}
-Contrairement à SVN, il s'agit d'un système décentralisé. Chacun possède son propre repository et publie son code sur le repository public. Une autre différence avec SVN est qu'il utilise la notion de changeset. C'est à dire qu'il préfère garder en mémoire les changements appliqués que les versions des fichiers.
-      \paragraph{Git}
+      \paragraph{Mercurial~:}
+Contrairement à SVN, il s'agit d'un système décentralisé. Chacun possède son propre \emph{repository} et publie son code sur le \emph{repository} public. Une autre différence avec SVN est qu'il utilise la notion de changeset. C'est à dire qu'il préfère garder en mémoire les changements appliqués que les versions des fichiers.
+      \paragraph{Git~:}
 Git possède très peu de différences avec Mercurial, mais l'histoire a fait qu'il c'est plus imposé que mercurial (qui est quand meme utilisé dans pas mal de projets dont ceux de Mozilla, même si git est possible).
 C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
 Pour plus d'informations sur les différences vous pouvez vous référer à ces articles : \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
@@ -52,7 +68,30 @@ Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
      \subsubsection{créer le dépot}
      \subsubsection{pull}
      \subsubsection{readme}
+     Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
      \subsubsection{add/diff/ignore/commit}
+\paragraph{git diff} : montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+\begin{verbatim}
+     diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
+index b796d13..3847b93 100644
+--- a/apps/system/js/sound_manager.js
++++ b/apps/system/js/sound_manager.js
+@@ -686,7 +686,11 @@
+     };
+   }
+ 
+-  function setVibrationEnabled(enabled) {
++  function setVibrationEnabled(enabled) {    
++    //vibrate
++    if ('vibrate' in navigator && enabled) {
++      navigator.vibrate([200, 100, 200]);
++    }
+     setVibrationEnabledCount++;
+     SettingsListener.getSettingsLock().set({
+       'vibration.enabled': enabled
+    
+\end{verbatim}   
+     On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
      \subsubsection{push}
   \subsection{Historique}
 \section{Manipulation avancée}
@@ -64,4 +103,14 @@ Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
      \subsubsection{savoir qui a fait quoi}
   \subsection{Se positionner sur un commit}
   \subsection{Contribuer à un autre repository}
+Généralement, il y a deux possibilités : 
+* Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
+* Coder
+L'ouverture d'issues nécessite de regarder un minimum si l'issue n'a pas déjà été ouverte, de détailler son probleme et de bien regarder la version qu'on utilise.
+Pour programmer, il faut forker le dépot et le récupérer en local.
+Puis il suffit de créer sa branche, de réaliser les modifications nécessaires.
+Quelques fois, il est demandé de créer des tests pour son bout de code.
+Avant de proposer il faut vérifier son code (norme, lisibilité, ...)
+Enfin il faut push votre travail sur votre fork et effectuer une pull request.
+La suite dépend du fonctionnement du projet.
 \end{document}
