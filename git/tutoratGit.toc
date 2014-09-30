@@ -27,8 +27,8 @@
 \contentsline {section}{\numberline {3.2}branch}{7}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}cr\IeC {\'e}er sa branche}{7}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}fusionner}{7}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}r\IeC {\'e}soudre un conflit}{7}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}savoir qui a fait quoi}{7}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Supprimer un commit}{7}{section.3.3}
-\contentsline {section}{\numberline {3.4}Se positionner sur un commit}{8}{section.3.4}
-\contentsline {section}{\numberline {3.5}Contribuer \IeC {\`a} un autre repository}{8}{section.3.5}
+\contentsline {subsection}{\numberline {3.2.3}r\IeC {\'e}soudre un conflit}{9}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}savoir qui a fait quoi}{9}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Supprimer un commit}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Se positionner sur un commit}{10}{section.3.4}
+\contentsline {section}{\numberline {3.5}Contribuer \IeC {\`a} un autre repository}{10}{section.3.5}
