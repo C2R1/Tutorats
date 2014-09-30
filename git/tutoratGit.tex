@@ -87,15 +87,15 @@ Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creati
 \end{itemize}
 
     \subsection{R\'ecup\'erer un d\'ep\^ot existant}
-Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette addresse sur la page du d\'ep\^ot sur github, sous le nopm \emph{HTTPS clone URL}.\\
+Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette addresse sur la page du d\'ep\^ot sur github, sous le nom \emph{HTTPS clone URL}.\\
 
 il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot, et effectuer la commande \verb|git clone <URL>|.\\
 Ainsi, pour notre exemple~: \verb|git clone https://github.com/C2R1/Tutorats.git|.
 
-    \subsection{readme}
+    \subsection{README}
 Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
   \section{Premier commit}
-une fois que l'on a le d\'ep\^ot clon\'e sur son ordinateur, on peut commencer \`a coder. Cependant, les modifications ne se font pas en temps r\'eel sur le serveur. Ainsi, il faut connaitre quelques commandes pour r\'ecup\'erer les modifications faites par les autres d\'eveloppeurs, et pouvoir leur envoyer nos modifications.
+Une fois que l'on a le d\'ep\^ot clon\'e sur son ordinateur, on peut commencer \`a coder. Cependant, les modifications ne se font pas en temps r\'eel sur le serveur. Ainsi, il faut connaitre quelques commandes pour r\'ecup\'erer les modifications faites par les autres d\'eveloppeurs, et pouvoir leur envoyer nos modifications.
      \subsection{R\'ecup\'erer les modifications depuis le serveur}
 Pour r\'ecup\'erer les modifications, il faut utiliser la commande \verb|git pull|.
      \subsection{Envoyer les modifications vers le serveur}
@@ -123,7 +123,7 @@ Soit~:
 
 
      \subsection{diff/ignore}
-montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+Pour obtenir tous les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
      diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
 index b796d13..3847b93 100644
@@ -143,14 +143,48 @@ index b796d13..3847b93 100644
      SettingsListener.getSettingsLock().set({
        'vibration.enabled': enabled
 \end{verbatim}   
-     On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
-     \subsection{push}
+Note : On peut aussi obtenir la différence entre 2 commits avec cette commande. \\
+On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
   \section{Historique}
 \chapter{Manipulation avancée}
-  \section{Méthode de développement}
+	\section{Plus d'informations sur le fonctionnement de git}
+	Quand vous commitez avec git, git enregistre un objet qui contient un pointeur vers vos changements, l'auteur, le message de commit et un lien vers zéro parent si c'est le commit initial, 1 parent pour un commit classique, plus pour un commit résultant d'un merge entre 2 ou plusieurs branches.
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/objetcommit}
+    \caption{Forme d'un objet commit}
+    \label{obCommit}
+  \end{center}
+\end{figure}
+	Un projet sera donc représenté par une suite de ces objets. Avec un pointeur nommé HEAD représentant l'endroit ou l'utilisateur se trouve.
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/git}
+    \caption{Représentation d'un git}
+    \label{obgit}
+  \end{center}
+\end{figure}
+
   \section{branch}
      \subsection{créer sa branche}
-     Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande \verb|git branch|. Une autre méthode plus rapide et d'utiliser \verb|git checkout -b <nom de la branche>| qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser \verb|git checkout <nom de la branche>|.
+     Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande \verb|git branch|. Une autre méthode plus rapide et d'utiliser \verb|git checkout -b <nom de la branche>| qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser \verb|git checkout <nom de la branche>| :
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/prebranch}
+    \caption{Avant git checkout -b}
+    \label{obprebranch}
+  \end{center}
+\end{figure}
+\begin{verbatim}
+>> git checkout -b delta
+\end{verbatim}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/afterbranch}
+    \caption{Apr\`es git checkout -b}
+    \label{obpostbranch}
+  \end{center}
+\end{figure}
      \subsection{fusionner}
      Pour fusionner deux branches, il faut utiliser \verb|git merge|.
      Exemple : On veut écraser une branche par une autre.\\
@@ -272,7 +306,7 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 \verb|git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b| va donc nous supprimer le fichier README qui a été créé pendant ce commit.
   \section{Se positionner sur un commit}
   Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (\verb|git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b| par exemple) pour se placer sur un commit précis.
-  (Schéma + explication du fonctionnement du pointeur HEAD)
+  IMAGE
   \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
 * Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)

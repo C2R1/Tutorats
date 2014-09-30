@@ -81,23 +81,49 @@ Sur Github, ceci se fait avec un formulaire, accessible en cliquant sur le bouto
 
 Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creationRepo}), qui nous demande~:
 \begin{itemize}
- \item le nom du d\'ep\^ot (\emph{Repository name})\\
- \item une description (optionnelle)\\
+ \item le nom du d\'ep\^ot (\emph{Repository name})
+ \item une description (optionnelle)
  \item s'il faut initialiser le d\'ep\^ot (\`a ne pas cocher si vous avez fait \verb|git init|).
 \end{itemize}
 
     \subsection{R\'ecup\'erer un d\'ep\^ot existant}
-Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette addresse sur la page du d\'ep\^ot sur github, sous le nopm \emph{HTTPS clone URL}.\\
+Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette addresse sur la page du d\'ep\^ot sur github, sous le nom \emph{HTTPS clone URL}.\\
 
 il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot, et effectuer la commande \verb|git clone <URL>|.\\
 Ainsi, pour notre exemple~: \verb|git clone https://github.com/C2R1/Tutorats.git|.
 
+    \subsection{README}
+Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
   \section{Premier commit}
-     \subsection{pull}
-     \subsection{readme}
-     Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
-     \subsection{add/diff/ignore/commit}
-\subsubsection{git diff} : montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+Une fois que l'on a le d\'ep\^ot clon\'e sur son ordinateur, on peut commencer \`a coder. Cependant, les modifications ne se font pas en temps r\'eel sur le serveur. Ainsi, il faut connaitre quelques commandes pour r\'ecup\'erer les modifications faites par les autres d\'eveloppeurs, et pouvoir leur envoyer nos modifications.
+     \subsection{R\'ecup\'erer les modifications depuis le serveur}
+Pour r\'ecup\'erer les modifications, il faut utiliser la commande \verb|git pull|.
+     \subsection{Envoyer les modifications vers le serveur}
+Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git les fichiers qui ont \'et\'es ajout\'es depuis la derni\`ere modification. Ceci se fait avec la commande \verb|git add <fichiers>|. Par exemple, pour ajouter tous les nouveaux fichiers, on peut utiliser \verb|git add *|.\\
+
+Ensuite, il faut ``enregistrer'' les modifications localement. On dit alors qu'on \emph{commit} les changements. La commande est donc \verb|git commit <fichiers>|, en sp\'ecifiant les fichier \`a \emph{commit}. Pour enregistrer les modifications de tous les fichiers, on utilise l'option \verb|-a| (pour \emph{all}), et ainsi~: \verb|git commit -a|.\\
+Durant un commit, il faut expliquer les changements effectu\'es. C'est l'utilit\'e du \emph{commit message}. On peut sp\'ecifier ce message en utilisant l'option \verb|-m <message>|. soit~: \verb|git commit -m <message>|.\\
+Si l'on ne sp\'ecifie pas de message avec l'option \verb|-m|, \verb|git| lancera un \'editeur de texte (\verb|vi| par d\'efaut) pour \'ecrire le message. En cas de message vide, le commit ne peut se faire.\\
+
+Enfin, il faut envoyer ses modifications au serveur. C'est l'utilit\'e de la commande \verb|git push|. \\
+
+Par exemple, pour ``dire'' au serveur qu'on a ajout\'e le fichier \verb|c2r1.dtc|, on utilisera la suite de commande~:
+\begin{verbatim}
+>> git add c2r1.dtc
+>> git commit -am "ajout du fichier c2r1.dtc"
+>> git push
+\end{verbatim}
+
+Soit~:
+\begin{itemize}
+ \item On ``avertit'' git qu'on ajoute le fichier,
+ \item On \emph{commit} les changements de tous les fichiers (\verb|a|), avec un message (\verb|m|),
+ \item On envoie les modifications au serveur.
+\end{itemize}
+
+
+     \subsection{diff/ignore}
+Pour obtenir tous les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
      diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
 index b796d13..3847b93 100644
@@ -117,47 +143,59 @@ index b796d13..3847b93 100644
      SettingsListener.getSettingsLock().set({
        'vibration.enabled': enabled
 \end{verbatim}   
-     On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
-     \subsection{push}
+Note : On peut aussi obtenir la différence entre 2 commits avec cette commande. \\
+On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
   \section{Historique}
 \chapter{Manipulation avancée}
-  \section{Méthode de développement}
+	\section{Plus d'informations sur le fonctionnement de git}
+	Quand vous commitez avec git, git enregistre un objet qui contient un pointeur vers vos changements, l'auteur, le message de commit et un lien vers zéro parent si c'est le commit initial, 1 parent pour un commit classique, plus pour un commit résultant d'un merge entre 2 ou plusieurs branches.
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/objetcommit}
+    \caption{Forme d'un objet commit}
+    \label{obCommit}
+  \end{center}
+\end{figure}
+
+	Un projet sera donc représenté par une suite de ces objets. Avec un pointeur nommé HEAD représentant l'endroit ou l'utilisateur se trouve.
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/git}
+    \caption{Représentation d'un git}
+    \label{obgit}
+  \end{center}
+\end{figure}
   \section{branch}
      \subsection{créer sa branche}
-     Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande git branch. Une autre méthode plus rapide et d'utiliser git checkout -b nomDeLaBranche qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser git checkout nomDeLaBranche.
+     Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande \verb|git branch|. Une autre méthode plus rapide et d'utiliser \verb|git checkout -b <nom de la branche>| qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser \verb|git checkout <nom de la branche>| :
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/prebranch}
+    \caption{Avant git checkout -b}
+    \label{obprebranch}
+  \end{center}
+\end{figure}
+\begin{verbatim}
+>> git checkout -b delta
+\end{verbatim}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/afterbranch}
+    \caption{Apr\`es git checkout -b}
+    \label{obpostbranch}
+  \end{center}
+\end{figure}
      \subsection{fusionner}
-     Pour fusionner deux branches, il faut utiliser git merge.
-     Exemple : On veut écraser une branche par une autre.
-     
-     [AmarOk@AmarOkPC repo]$ ls
+     Pour fusionner deux branches, il faut utiliser \verb|git merge|.
+     Exemple : On veut écraser une branche par une autre.\\
+     1/ On se place dans le repository. Ici, il contient un dossier git et un fichier README.md
+\begin{verbatim}
+     >> ls
 git  README.md
-[AmarOk@AmarOkPC repo]$ git log
-commit 5d382e3e4b88dc319296579ee9eb302a7b4efd04
-Merge: 860b6b6 b4c4f6c
-Author: AmarOk1412 <amarok@enconn.fr>
-Date:   Tue Sep 30 13:23:15 2014 +0200
-
-    Merge branch 'master' of https://github.com/C2R1/Tutorats
-
-commit 860b6b69696690e74b3a0188103e8e2bd1652332
-Author: AmarOk1412 <amarok@enconn.fr>
-Date:   Tue Sep 30 13:22:22 2014 +0200
-
-    branches
-
-commit b4c4f6c17895942e9c301018d9f84f98b63d199f
-Merge: 806468b dcf3875
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 13:14:42 2014 +0200
-
-    Merge branch 'master' of https://github.com/C2R1/Tutorats
-
-commit 806468b3f1a513cb60f79ec92c29fd8cd6506e06
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 13:14:23 2014 +0200
-
-    creation et recuperation de depot
-
+\end{verbatim}
+     2/ On regarde l'historique pour chercher sur quel commit on veut se placer (ici initial commit)
+\begin{verbatim}
+>> git log
 commit dcf387590eaf281c10ee7f989a690c223d0b125a
 Author: AmarOk1412 <amarok@enconn.fr>
 Date:   Tue Sep 30 13:11:15 2014 +0200
@@ -170,174 +208,67 @@ Date:   Tue Sep 30 13:04:14 2014 +0200
 
     creation du depot
 
-commit 2375f37bc7882de23f25cd254be9eba89cc0e973
-Merge: 3ec83b2 afcd4da
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 12:51:49 2014 +0200
-
-    Merge branch 'master' of https://github.com/C2R1/Tutorats
-
-commit 3ec83b24ad6019a5821414afe65cee3f222ce05a
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 12:51:40 2014 +0200
-
-    few changes
-
-commit afcd4da7ef06cdc83586eac5a85cb817f4182907
-Author: AmarOk1412 <amarok@enconn.fr>
-Date:   Tue Sep 30 12:49:39 2014 +0200
-
-    se positionner sur un commit, en supprimer un
-
-commit 38df27de64b9aa47e6281196bb52337200873b67
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 12:43:47 2014 +0200
-
-    added a few images
-
-commit 2e7b01266285221925af8742d2fd1c5b2be89bb8
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 12:34:07 2014 +0200
-
-    article > report
-
-commit 88eea1524075f0b2744215a7d7a319220ab71877
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 12:24:17 2014 +0200
-
-    plus d'informations
-
-commit 5ca985b47cee5562eed645e07c9b594d6c4101c9
-Author: n0m1s <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 11:45:36 2014 +0200
-
-    modificationsd de la partie histoire
-
-commit 7a4f7132dd5cc347d1e73daf3ceae30a3dc80d4b
-Merge: f231dee c610b4b
-Author: TheMrNomis <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 09:50:41 2014 +0200
-
-    Merge branch 'master' of https://github.com/C2R1/Tutorats
-    
-    Conflicts:
-        git/tutoratGit.tex~
-
-commit f231deec0fac7b370b328446b54dc41fbab5ab19
-Author: TheMrNomis <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 09:47:46 2014 +0200
-
-    headers
-
-commit c610b4bbc6d631b798f158d2b999f0d0d0e108a4
-Author: AmarOk1412 <amarok@enconn.fr>
-Date:   Tue Sep 30 09:26:40 2014 +0200
-
-    paragraph git diff + readme + Contribuer à un autre repo
-
-commit 616b3c6843e6aaa42bcf3a6f680760d94dcee57d
-Author: TheMrNomis <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 09:23:07 2014 +0200
-
-    titlepage
-
-commit 781c38ff637c10166e6ef28d2574919cb865b7cf
-Author: TheMrNomis <n0m1s@homnomnom.fr>
-Date:   Tue Sep 30 08:41:26 2014 +0200
-
-    plan du tutorat git
-
-commit 1cd1ccccb53846f9763044da4bf50f26a5aebd10
-Author: n0m1s <nomis@nosferapti.(none)>
-Date:   Tue Sep 30 08:25:28 2014 +0200
-
-    started git tutorial
+...
 
 commit f1b4c0ebf59da0af7d782303f52bdae86c3d257b
 Author: AmarOk1412 <amarok@enconn.fr>
 Date:   Mon Sep 29 22:45:53 2014 +0200
 
     Initial commit
-[AmarOk@AmarOkPC repo]$ git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b
-Note: checking out 'f1b4c0ebf59da0af7d782303f52bdae86c3d257b'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD est maintenant sur f1b4c0e... Initial commit
-[AmarOk@AmarOkPC repo]$ git checkout -b delta
+\end{verbatim}
+    3/ On se place sur le commit. Et on créer une branche (ici on la nomme delta).
+ \begin{verbatim}
+>> git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b
+>> git checkout -b delta
 Basculement sur la nouvelle branche 'delta'
-[AmarOk@AmarOkPC repo]$ git branch
+>> git branch
 * delta
   master
-[AmarOk@AmarOkPC repo]$ echo someDiff > README.md 
-[AmarOk@AmarOkPC repo]$ git commit README.md -m "exemple"
+\end{verbatim}
+    4/ On effectue quelques modifications et on les commit
+\begin{verbatim}
+>> echo someDiff > README.md 
+>> git commit README.md -m "exemple"
 [delta e1e999e] exemple
  1 file changed, 1 insertion(+), 2 deletions(-)
-[AmarOk@AmarOkPC repo]$ git merge -s ours master -m "ours attack"
+\end{verbatim}
+    5/ Sur la branche qu'on souhaite garder on merge master avec une stratégie dite ours (ours
+           This resolves any number of heads, but the resulting tree of the merge is always that of the current branch head, effectively ignoring
+           all changes from all other branches. It is meant to be used to supersede old development history of side branches. Note that this is
+           different from the -Xours option to the recursive merge strategy.
+)
+\begin{verbatim}
+>> git merge -s ours master -m "ours attack"
 Merge made by the 'ours' strategy.
-[AmarOk@AmarOkPC repo]$ git checkout master
+\end{verbatim}
+    6/ On se place sur la branche que l'on souhaite écraser (master ici). 
+\begin{verbatim}
+>> git checkout master
 Basculement sur la branche 'master'
 Votre branche est à jour avec 'origin/master'.
-[AmarOk@AmarOkPC repo]$ git merge --no-ff delta 
-Suppression de git/tutoratGit.toc
-Suppression de git/tutoratGit.tex~
-Suppression de git/tutoratGit.tex.backup
-Suppression de git/tutoratGit.tex
-Suppression de git/tutoratGit.synctex.gz
-Suppression de git/tutoratGit.pdf
-Suppression de git/tutoratGit.out
-Suppression de git/tutoratGit.log
-Suppression de git/tutoratGit.aux
-Suppression de git/images/createRepoForm.png
-Suppression de git/images/createRepo.png
-Suppression de git/C2R1.png
-Merge made by the 'recursive' strategy.
- README.md                     |   3 +-
- git/C2R1.png                  | Bin 27772 -> 0 bytes
- git/images/createRepo.png     | Bin 5062 -> 0 bytes
- git/images/createRepoForm.png | Bin 41610 -> 0 bytes
- git/tutoratGit.aux            |  67 ------------
- git/tutoratGit.log            | 647 ----------------------------------------------------------------------------------------------------------------
- git/tutoratGit.out            |  29 -----
- git/tutoratGit.pdf            | Bin 245773 -> 0 bytes
- git/tutoratGit.synctex.gz     | Bin 35081 -> 0 bytes
- git/tutoratGit.tex            | 190 ---------------------------------
- git/tutoratGit.tex.backup     | 176 -------------------------------
- git/tutoratGit.tex~           | 185 --------------------------------
- git/tutoratGit.toc            |  34 ------
- 13 files changed, 1 insertion(+), 1330 deletions(-)
- delete mode 100644 git/C2R1.png
- delete mode 100644 git/images/createRepo.png
- delete mode 100644 git/images/createRepoForm.png
- delete mode 100644 git/tutoratGit.aux
- delete mode 100644 git/tutoratGit.log
- delete mode 100644 git/tutoratGit.out
- delete mode 100644 git/tutoratGit.pdf
- delete mode 100644 git/tutoratGit.synctex.gz
- delete mode 100644 git/tutoratGit.tex
- delete mode 100644 git/tutoratGit.tex.backup
- delete mode 100644 git/tutoratGit.tex~
- delete mode 100644 git/tutoratGit.toc
-[AmarOk@AmarOkPC repo]$ ls
+\end{verbatim}
+    7/ Et on merge delta sur master
+\begin{verbatim}
+>> git merge --no-ff delta 
+Message des modifications
+\end{verbatim}
+    8/ Et voilà, delta a écrasé master.
+\begin{verbatim}
+>> ls
 README.md
+\end{verbatim}
+
 
      \subsection{résoudre un conflit}
      \subsection{savoir qui a fait quoi}
      Pour savoir qui a fait quoi, il suffit de faire git log. On a alors accès à l'historique. un commit se présente de la forme : 
-     "commit n°commit
+     "commit \no commit
 Author: Auteur <mail>
 Date:   Date
 
     message du commit"
   \section{Supprimer un commit}
-  Pour supprimer un commit, il suffit de faire git revert n\no du commit.
+  Pour supprimer un commit, il suffit de faire git revert \no du commit.
 Exemple :
 \begin{verbatim}
 >>git log
@@ -371,11 +302,11 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 
     Initial commit
 "
-git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b va donc nous supprimer le fichier README qui a été créé pendant ce commit.
 \end{verbatim}
+\verb|git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b| va donc nous supprimer le fichier README qui a été créé pendant ce commit.
   \section{Se positionner sur un commit}
-  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout n\no du commit (git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b par exemple) pour se placer sur un commit précis.
-  (Schéma + explication du fonctionnement du pointeur HEAD)
+  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (\verb|git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b| par exemple) pour se placer sur un commit précis.
+  IMAGE
   \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
 * Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
