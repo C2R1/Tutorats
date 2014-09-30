@@ -55,7 +55,28 @@ Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
      \subsubsection{créer le dépot}
      \subsubsection{pull}
      \subsubsection{readme}
+     Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
      \subsubsection{add/diff/ignore/commit}
+\paragraph{git diff} : montre les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+     diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
+index b796d13..3847b93 100644
+--- a/apps/system/js/sound_manager.js
++++ b/apps/system/js/sound_manager.js
+@@ -686,7 +686,11 @@
+     };
+   }
+ 
+-  function setVibrationEnabled(enabled) {
++  function setVibrationEnabled(enabled) {    
++    //vibrate
++    if ('vibrate' in navigator && enabled) {
++      navigator.vibrate([200, 100, 200]);
++    }
+     setVibrationEnabledCount++;
+     SettingsListener.getSettingsLock().set({
+       'vibration.enabled': enabled
+       
+     On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
      \subsubsection{push}
   \subsection{Historique}
 \section{Manipulation avancée}
@@ -67,4 +88,14 @@ Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
      \subsubsection{savoir qui a fait quoi}
   \subsection{Se positionner sur un commit}
   \subsection{Contribuer à un autre repository}
+Généralement, il y a deux possibilités : 
+_ Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
+_ Coder
+L'ouverture d'issues nécessite de regarder un minimum si l'issue n'a pas déjà été ouverte, de détailler son probleme et de bien regarder la version qu'on utilise.
+Pour programmer, il faut forker le dépot et le récupérer en local.
+Puis il suffit de créer sa branche, de réaliser les modifications nécessaires.
+Quelques fois, il est demandé de créer des tests pour son bout de code.
+Avant de proposer il faut vérifier son code (norme, lisibilité, ...)
+Enfin il faut push votre travail sur votre fork et effectuer une pull request.
+La suite dépend du fonctionnement du projet.
 \end{document}
