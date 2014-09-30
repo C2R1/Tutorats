@@ -3,12 +3,25 @@
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage{url}
-
-%opening
-\title{Tutorat Git}
-\author{Amaury \textesc{Louarn}}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
 \begin{document}
+
+\begin{titlepage}
+\vspace{-3cm}\hspace{-2cm}\includegraphics[scale=0.4]{C2R1}
+\begin{center}
+\vspace{2cm}
+{\fontfamily{phv}\selectfont
+\Large{C2R1}\\
+\vspace{0.5cm}
+\Huge{Tutorat Git}}\\
+\end{center}
+\vfill
+{\fontfamily{phv}\selectfont
+\large{Version du \today}}
+
+\end{titlepage}
 
 \newpage
 
@@ -23,13 +36,14 @@ Ce fut le plus utilisé pendant longtemps. Développé par la fondation Apache, 
       \paragraph{Mercurial}
 Contrairement à SVN, il s'agit d'un système décentralisé. Chacun possède son propre repository et publie son code sur le repository public. Une autre différence avec SVN est qu'il utilise la notion de changeset. C'est à dire qu'il préfère garder en mémoire les changements appliqués que les versions des fichiers.
       \paragraph{Git}
-Git possède très peu de différences avec Mercurial, mais l'histoire a fait qu'il c'est plus imposé que mercurial (qui est quand meme utilisé dans pas mal de projets dont ceux de Mozilla, même si git est possible). C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
+Git possède très peu de différences avec Mercurial, mais l'histoire a fait qu'il c'est plus imposé que mercurial (qui est quand meme utilisé dans pas mal de projets dont ceux de Mozilla, même si git est possible).
+C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
 Pour plus d'informations sur les différences vous pouvez vous référer à ces articles : \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
   \subsection{Installation}
     \subsubsection{Windows}
-Lancez le programme que vous pouvez trouver sur cette page : http://msysgit.github.io
+Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit.github.io} ou \url{http://www.git-scm.com/}
     \subsubsection{Linux}
-\verb|apt-get install git| ou \verb| yum install git| selon la distribution
+\verb|apt-get install git| ou \verb|yum install git| selon la distribution
     \subsubsection{Mac OS}
 \verb|sudo port install git-core +svn +doc +bash_completion +gitweb|
   \subsection{Github/Gitlab}

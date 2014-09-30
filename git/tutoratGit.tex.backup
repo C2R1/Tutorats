@@ -6,22 +6,19 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 
+%opening
+\title{Tutorat Git}
+\author{Amaury \textesc{Louarn}}
+
 \begin{document}
 
 \begin{titlepage}
-\vspace{-3cm}\hspace{-2cm}\includegraphics[scale=0.4]{C2R1}
+\includegraphics[height=5cm]{C2R1} \hfill \includegraphics[height=5cm]{git}
 \begin{center}
-\vspace{2cm}
-{\fontfamily{phv}\selectfont
 \Large{C2R1}\\
-\vspace{0.5cm}
-\Huge{Tutorat Git}}\\
+\huge{Tutorat Git}
 \end{center}
-\begin{flushright}
- \vfill
-{\fontfamily{phv}\selectfont
-\large{Version du \today}}
-\end{flushright}
+
 \end{titlepage}
 
 \newpage
