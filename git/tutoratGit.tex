@@ -56,22 +56,26 @@ C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets com
 C'est le gestionnaire de version utilis\'e par l'\'equipe de d\'eveloppeurs du noyeau linux.\\
 
 Pour plus d'informations sur les différences entre mercurial et Git, vous pouvez vous référer à ces articles~: \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
-  \section{Installation}
+  \section{Installation du client git}
     \subsection{Windows}
 Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit.github.io} ou \url{http://www.git-scm.com/}
     \subsection{Linux}
 \verb|apt-get install git| ou \verb|yum install git| selon la distribution
     \subsection{Mac OS}
 \verb|sudo port install git-core +svn +doc +bash_completion +gitweb|
-  \section{Github/Gitlab}
+  \section{Choix du serveur git}
 Pour la suite de ce tutorat, il vous faut créer un compte github : \url{https://github.com/}.
 Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
 
 \chapter{Manipulation basique de git}
   \section{D\'ebut du projet}
     \subsection{Cr\'eer le d\'ep\^ot}
-Pour cr\'eer le d\'ep\^ot, il faut tout d'abord cr\'eer un \emph{repository} sur le serveur.\\
-Sous github, 
+Pour cr\'eer le d\'ep\^ot, il faut initialiser un dossier. Ceci se fait avec la commande \verb|git init|. Ensuite, il faut cr\'eer le d\'ep\^ot sur le serveur.\\
+Sur Github, ceci se fait avec un formulaire, accessible en cliquant sur le bouton \emph{create repository}
+\begin{figure}
+ \includegraphics[scale=0.5]{images/createRepoForm}
+\end{figure}
+
 \subsection{R\'ecup\'erer un d\'ep\^ot existant}
   \section{Premier commit}
      \subsection{pull}
