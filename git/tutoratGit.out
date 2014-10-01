@@ -1,29 +1,29 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{Histoire}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.1.1}{Versionnage de code?}{section.1.1}
-\BOOKMARK [2][-]{subsection.1.1.2}{Outils de versionnage}{section.1.1}
-\BOOKMARK [1][-]{section.1.2}{Installation du client git}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.2.1}{Windows}{section.1.2}
-\BOOKMARK [2][-]{subsection.1.2.2}{Linux}{section.1.2}
-\BOOKMARK [2][-]{subsection.1.2.3}{Mac OS}{section.1.2}
-\BOOKMARK [1][-]{section.1.3}{Choix du serveur git}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Manipulation basique de git}{}
-\BOOKMARK [1][-]{section.2.1}{D\351but du projet}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.1.1}{Cr\351er le d\351p\364t}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.2}{R\351cup\351rer un d\351p\364t existant}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.3}{README}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{Premier commit}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.2.1}{R\351cup\351rer les modifications depuis le serveur}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.2}{Envoyer les modifications vers le serveur}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.3}{diff/ignore}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{Historique}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Manipulation avanc\351e}{}
-\BOOKMARK [1][-]{section.3.1}{Plus d'informations sur le fonctionnement de git}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{branch}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.2.1}{cr\351er sa branche}{section.3.2}
-\BOOKMARK [2][-]{subsection.3.2.2}{fusionner}{section.3.2}
-\BOOKMARK [2][-]{subsection.3.2.3}{R\351soudre un conflit}{section.3.2}
-\BOOKMARK [2][-]{subsection.3.2.4}{git log}{section.3.2}
-\BOOKMARK [1][-]{section.3.3}{Supprimer un commit}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{Se positionner sur un commit}{chapter.3}
-\BOOKMARK [1][-]{section.3.5}{Contribuer \340 un autre repository}{chapter.3}
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Histoire}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Versionnage de code?}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Outils de versionnage}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Installation du client git}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.2.1}{Windows}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{Linux}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.3}{Mac OS}{section.1.2}% 8
+\BOOKMARK [1][-]{section.1.3}{Choix du serveur git}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Manipulation basique de git}{}% 10
+\BOOKMARK [1][-]{section.2.1}{D\351but du projet}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.1.1}{Cr\351er le d\351p\364t}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{R\351cup\351rer un d\351p\364t existant}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.3}{README}{section.2.1}% 14
+\BOOKMARK [1][-]{section.2.2}{Premier commit}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{R\351cup\351rer les modifications depuis le serveur}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Envoyer les modifications vers le serveur}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.3}{diff/ignore}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Historique}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Manipulation avanc\351e}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Plus d'informations sur le fonctionnement de git}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{branch}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.2.1}{cr\351er sa branche}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.2}{fusionner}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.3}{R\351soudre un conflit}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.4}{git log}{section.3.2}% 26
+\BOOKMARK [1][-]{section.3.3}{Supprimer un commit}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Se positionner sur un commit}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{Contribuer \340 un autre repository}{chapter.3}% 29
