@@ -37,16 +37,15 @@
 \pagestyle{fancy}
 
 \tableofcontents
-<<<<<<< HEAD
+\newpage
 
+<<<<<<< HEAD
 \section{Introduction}
   \subsection{Histoire}
     \subsubsection{Versionnage de code?}
 Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
     \subsubsection{Outils de versionnage}
 =======
-\newpage
-
 \chapter{Introduction}
   \section{Histoire}
     \subsection{Versionnage de code?}
@@ -300,7 +299,7 @@ README.md
 \end{verbatim}
 
 
-     \subsection{R\'e'soudre un conflit}
+     \subsection{R\'esoudre un conflit}
      Un conflit git se présente de la forme :
 \begin{verbatim}
 <<<<<<< HEAD

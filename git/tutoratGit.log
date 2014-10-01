@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.9.30)  1 OCT 2014 11:16
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.9.30)  1 OCT 2014 11:28
 entering extended mode
  %&-line parsing enabled.
 **tutoratGit.tex
@@ -478,7 +478,7 @@ LaTeX Info: Redefining \pageref on input line 18.
 \openout3 = `tutoratGit.out'.
 
 \AtBeginShipoutBox=\box27
- <C2R1.png, id=131, 401.5pt x 401.5pt>
+ <C2R1.png, id=119, 401.5pt x 401.5pt>
 File: C2R1.png Graphic file (type png)
  <use C2R1.png>
 LaTeX Font Info:    Try loading font information for T1+phv on input line 25.
@@ -490,9 +490,9 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./C2R1.png (PNG copy)>] (.
 /tutoratGit.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write4
 \openout4 = `tutoratGit.toc'.
@@ -504,143 +504,138 @@ been already used, duplicate ignored
 l.40 \newpage
               [1
 
-] [2]
+]
 Partie 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
-[3
+[2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 65.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 57.
  (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (12.6629pt too wide) in paragraph at lines 65--66
+Overfull \hbox (12.6629pt too wide) in paragraph at lines 57--58
 \T1/cmtt/m/n/10 08 / 07 / git-[]vs-[]mercurial/$[]\T1/cmr/m/n/10 , []$\T1/cmtt/
 m/n/10 http : / / www . rockstarprogrammer . org / post / 2008 /
  []
 
-
-Overfull \hbox (16.83197pt too wide) in paragraph at lines 72--74
-[][]\T1/cmtt/m/n/10 sudo port install git-core +svn +doc +bash_completion +gitw
-eb \T1/cmr/m/n/10 <<<<<<<
- []
-
-[4]
+[3]
 Partie 2.
-<images/createRepoForm.png, id=208, 798.985pt x 484.81125pt>
+<images/createRepoForm.png, id=189, 798.985pt x 484.81125pt>
 File: images/createRepoForm.png Graphic file (type png)
 
 <use images/createRepoForm.png>
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-[5
+[4
 
  <./images/createRepoForm.png>]
-Overfull \hbox (16.80054pt too wide) in paragraph at lines 104--106
+Overfull \hbox (16.80054pt too wide) in paragraph at lines 92--94
 \T1/cmr/m/n/10 Ainsi, pour notre exemple : []\T1/cmtt/m/n/10 git clone https://
 github.com/C2R1/Tutorats.git\T1/cmr/m/n/10 . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[6]
-Overfull \hbox (90.64362pt too wide) in paragraph at lines 157--157
+[5]
+Overfull \hbox (90.64362pt too wide) in paragraph at lines 145--145
 []     \T1/cmtt/m/n/10 diff --git a/apps/system/js/sound_manager.js b/apps/syst
 em/js/sound_manager.js[] 
  []
 
-[7]
+[6]
 Partie 3.
-<images/objetcommit.png, id=228, 642.4pt x 401.5pt>
+<images/objetcommit.png, id=209, 642.4pt x 401.5pt>
 File: images/objetcommit.png Graphic file (type png)
 
-<use images/objetcommit.png> <images/git.png, id=229, 642.4pt x 401.5pt>
+<use images/objetcommit.png> <images/git.png, id=210, 642.4pt x 401.5pt>
 File: images/git.png Graphic file (type png)
 
 <use images/git.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/prebranch.png, id=230, 301.125pt x 150.5625pt>
+<images/prebranch.png, id=211, 301.125pt x 150.5625pt>
 File: images/prebranch.png Graphic file (type png)
 
 <use images/prebranch.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8
+[7
 
  <./images/objetcommit.png>]
-<images/afterbranch.png, id=237, 501.875pt x 150.5625pt>
+<images/afterbranch.png, id=218, 501.875pt x 150.5625pt>
 File: images/afterbranch.png Graphic file (type png)
 
-<use images/afterbranch.png> [9 <./images/git.png> <./images/prebranch.png> <./
-images/afterbranch.png>] <images/3exp.png, id=248, 622.325pt x 240.9pt>
+<use images/afterbranch.png> [8 <./images/git.png> <./images/prebranch.png> <./
+images/afterbranch.png>] <images/3exp.png, id=229, 622.325pt x 240.9pt>
 File: images/3exp.png Graphic file (type png)
 
-<use images/3exp.png> <images/4exp.png, id=249, 602.25pt x 321.2pt>
+<use images/3exp.png> <images/4exp.png, id=230, 602.25pt x 321.2pt>
 File: images/4exp.png Graphic file (type png)
 
 <use images/4exp.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/5exp.png, id=250, 803.0pt x 321.2pt>
+<images/5exp.png, id=231, 803.0pt x 321.2pt>
 File: images/5exp.png Graphic file (type png)
  <use images/5exp.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./images/3exp.png>] <images/6exp.png, id=257, 858.20625pt x 225.84375pt>
+[9 <./images/3exp.png>] <images/6exp.png, id=238, 858.20625pt x 225.84375pt>
 File: images/6exp.png Graphic file (type png)
 
-<use images/6exp.png>
+<use images/6exp.png> [10 <./images/4exp.png> <./images/5exp.png> <./images/6ex
+p.png>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
-(Font)              size <6> substituted on input line 305.
+(Font)              size <6> substituted on input line 302.
 
-[11 <./images/4exp.png> <./images/5exp.png> <./images/6exp.png>]
-Overfull \hbox (2.52988pt too wide) in paragraph at lines 311--313
+
+Overfull \hbox (2.52988pt too wide) in paragraph at lines 308--310
 []\T1/cmr/m/n/10 Pour sup-pri-mer un com-mit, il suf-fit de faire git re-vert n
 []du com-mit. Exemple : 
  []
 
-
-Overfull \hbox (0.2768pt too wide) in paragraph at lines 346--347
+[11]
+Overfull \hbox (0.2768pt too wide) in paragraph at lines 343--344
 []\T1/cmtt/m/n/10 git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b \T1/cmr/m
 /n/10 va donc nous sup-
  []
 
-[12] [13] (./tutoratGit.aux)
+[12] (./tutoratGit.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.49994pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 5536 strings out of 493857
- 77331 string characters out of 1153305
- 154620 words of memory out of 3000000
- 8651 multiletter control sequences out of 15000+50000
+ 5527 strings out of 493857
+ 77212 string characters out of 1153305
+ 153619 words of memory out of 3000000
+ 8648 multiletter control sequences out of 15000+50000
  27092 words of font info for 37 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,10n,43p,465b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -654,9 +649,9 @@ r/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb></usr
 ype1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/
 share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on tutoratGit.pdf (14 pages, 358519 bytes).
+Output written on tutoratGit.pdf (13 pages, 352496 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 283 words of extra memory for PDF output out of 10000 (max. 10000000)
 
