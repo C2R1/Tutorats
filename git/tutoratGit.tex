@@ -225,6 +225,13 @@ Basculement sur la nouvelle branche 'delta'
 * delta
   master
 \end{verbatim}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/3exp}
+    \caption{On cr\'e\'e une branche}
+    \label{3exp}
+  \end{center}
+\end{figure}
     4/ On effectue quelques modifications et on les commit
 \begin{verbatim}
 >> echo someDiff > README.md 
@@ -232,6 +239,13 @@ Basculement sur la nouvelle branche 'delta'
 [delta e1e999e] exemple
  1 file changed, 1 insertion(+), 2 deletions(-)
 \end{verbatim}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/4exp}
+    \caption{On effectue quelques modifications}
+    \label{4exp}
+  \end{center}
+\end{figure}
     5/ Sur la branche qu'on souhaite garder on merge master avec une stratégie dite ours (ours
            This resolves any number of heads, but the resulting tree of the merge is always that of the current branch head, effectively ignoring
            all changes from all other branches. It is meant to be used to supersede old development history of side branches. Note that this is
@@ -241,6 +255,13 @@ Basculement sur la nouvelle branche 'delta'
 >> git merge -s ours master -m "ours attack"
 Merge made by the 'ours' strategy.
 \end{verbatim}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/5exp}
+    \caption{Merge avec strat\'egie ours}
+    \label{5exp}
+  \end{center}
+\end{figure}
     6/ On se place sur la branche que l'on souhaite écraser (master ici). 
 \begin{verbatim}
 >> git checkout master
@@ -252,6 +273,13 @@ Votre branche est à jour avec 'origin/master'.
 >> git merge --no-ff delta 
 Message des modifications
 \end{verbatim}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.3]{images/6exp}
+    \caption{On merge nos modifications sur master}
+    \label{6exp}
+  \end{center}
+\end{figure}
     8/ Et voilà, delta a écrasé master.
 \begin{verbatim}
 >> ls
