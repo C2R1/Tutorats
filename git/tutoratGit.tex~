@@ -35,6 +35,8 @@
 
 \pagestyle{fancy}
 
+\tableofcontents
+
 \section{Introduction}
   \subsection{Histoire}
     \subsubsection{Versionnage de code?}
@@ -56,7 +58,7 @@ Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit
 \verb|apt-get install git| ou \verb|yum install git| selon la distribution
     \subsubsection{Mac OS}
 \verb|sudo port install git-core +svn +doc +bash_completion +gitweb|
-  \subsection{Github/Gitlab}
+  \subsection{Github et Gitlab}
 Pour la suite de ce tutorat, il vous faut créer un compte github : \url{https://github.com/}.
 Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
 \section{Manipulation basique de git}
@@ -100,8 +102,8 @@ index b796d13..3847b93 100644
   \subsection{Se positionner sur un commit}
   \subsection{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
-_ Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
-_ Coder
+* Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
+* Coder
 L'ouverture d'issues nécessite de regarder un minimum si l'issue n'a pas déjà été ouverte, de détailler son probleme et de bien regarder la version qu'on utilise.
 Pour programmer, il faut forker le dépot et le récupérer en local.
 Puis il suffit de créer sa branche, de réaliser les modifications nécessaires.
