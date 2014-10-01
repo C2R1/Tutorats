@@ -193,13 +193,6 @@ On y trouve donc le numéro du commit, les fichiers modifiés, les lignes suppri
      >> ls
 git  README.md
 \end{verbatim}
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[scale=0.3]{images/2exp}
-    \caption{\'Etat initial}
-    \label{2exp}
-  \end{center}
-\end{figure}
      2/ On regarde l'historique pour chercher sur quel commit on veut se placer (ici initial commit)
 \begin{verbatim}
 >> git log
@@ -294,8 +287,17 @@ README.md
 \end{verbatim}
 
 
-     \subsection{résoudre un conflit}
-     \subsection{savoir qui a fait quoi}
+     \subsection{R\'e'soudre un conflit}
+     Un conflit git se présente de la forme :
+\begin{verbatim}
+<<<<<<< HEAD
+    partie du code de votre version locale
+=======
+    code présent sur master
+>>>>>>> master
+\end{verbatim}
+		Il suffit alors d'éditer le code pour qu'il redevienne à nouveau fonctionnel.'
+     \subsection{git log}
      Pour savoir qui a fait quoi, il suffit de faire git log. On a alors accès à l'historique. un commit se présente de la forme : 
      "commit \no commit
 Author: Auteur <mail>
@@ -341,7 +343,6 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 \verb|git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b| va donc nous supprimer le fichier README qui a été créé pendant ce commit.
   \section{Se positionner sur un commit}
   Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (\verb|git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b| par exemple) pour se placer sur un commit précis.
-  IMAGE
   \section{Contribuer à un autre repository}
 Généralement, il y a deux possibilités : 
 * Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
