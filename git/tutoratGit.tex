@@ -39,30 +39,22 @@
 \tableofcontents
 \newpage
 
-<<<<<<< HEAD
-\section{Introduction}
-  \subsection{Histoire}
-    \subsubsection{Versionnage de code?}
-Avez vous déjà travaillé sur un code en groupe ? Avez vous déjà tenté de programmer un logiciel sur plusieurs versions ? Si oui, vous vous êtes sans doute rendu compte qu'il était nécessaire d'avoir un outil pour pouvoir facilement travailler sur le même code au même moment. Ou alors pouvoir avoir un historique des modifications en fonction des versions. Vous avez donc besoin d'un outil de versionnage de code.
-    \subsubsection{Outils de versionnage}
-=======
 \chapter{Introduction}
   \section{Histoire}
     \subsection{Versionnage de code?}
 Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finie.
     \subsection{Outils de versionnage}
->>>>>>> bb4e8e73fd3692f743f77d19486c7e5df3620fe7
 Il existe de nombreux outils de versionnage de code. Les 3 plus connus sont sans doute Git, Mercurial et SVN.
       \subsubsection{SVN (subversion)}
-Ce fut le plus utilisé pendant longtemps. Développé par la fondation Apache, il s'agit d'une amélioration d'un programme nommé CVS (très peu utilisé aujourd'hui). Le plus gros problème de SVN est qu'il s'agit d'un système centralisé. Un serveur contient donc le code, des clients travaillent dessus. Il n'y a qu'un seul versionning. C'est le gestionnaire de version utilis\'e notamment par Apache, freeBSD et sourceforge.
+Ce fut le plus utilis\'e pendant longtemps. D\'evelopp\'e par la fondation Apache, il s'agit d'une am\'elioration d'un programme nomm\'e CVS (tr\`es peu utilis\'e aujourd'hui). Le plus gros probl\`eme de SVN est qu'il s'agit d'un syst\`eme centralis\'e. Un serveur contient donc le code, des clients travaillent dessus. Il n'y a qu'un seul versionning. C'est le gestionnaire de version utilis\'e notamment par Apache, freeBSD et Sourceforge.
       \subsubsection{Mercurial}
-Contrairement à SVN, il s'agit d'un système décentralisé. Chacun possède son propre \emph{repository} et publie son code sur le \emph{repository} public. Une autre différence avec SVN est qu'il utilise la notion de changeset. C'est à dire qu'il préfère garder en mémoire les changements appliqués que les versions des fichiers. Il est utilis\'e notamment par Mozilla (Firefox, Thunderbird, ...), Facebook, et adblock plus.
+Contrairement \`a SVN, il s'agit d'un syst\`eme d\'ecentralis\'e. Chacun poss\`ede son propre \emph{repository} et publie son code sur le \emph{repository} public. Une autre diff\'erence avec SVN est qu'il utilise la notion de changeset. C'est-\`a-dire qu'il pr\'ef\`ere garder en m\'emoire les changements appliqu\'es que les versions des fichiers. Il est utilis\'e notamment par Mozilla (Firefox, Thunderbird, ...), Facebook, et Adblock plus.
       \subsubsection{Git}
-Git possède très peu de différences avec Mercurial, mais l'histoire a fait qu'il c'est plus imposé.
-C'est en partie grâce à Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
+Git poss\`ede tr\`es peu de diff\'erences avec Mercurial, mais l'histoire a fait qu'il c'est plus impos\'e.
+C'est en partie grâce \`a Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
 C'est le gestionnaire de version utilis\'e par l'\'equipe de d\'eveloppeurs du noyeau linux.\\
 
-Pour plus d'informations sur les différences entre mercurial et Git, vous pouvez vous référer à ces articles~: \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
+Pour plus d'informations sur les diff\'erences entre mercurial et Git, vous pouvez vous r\'ef\'erer \`a ces articles~: \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
   \section{Installation du client git}
     \subsection{Windows}
 Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit.github.io} ou \url{http://www.git-scm.com/}
@@ -70,13 +62,9 @@ Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit
 \verb|apt-get install git| ou \verb|yum install git| selon la distribution
     \subsection{Mac OS}
 \verb|sudo port install git-core +svn +doc +bash_completion +gitweb|
-<<<<<<< HEAD
-  \subsection{Github et Gitlab}
-=======
   \section{Choix du serveur git}
->>>>>>> bb4e8e73fd3692f743f77d19486c7e5df3620fe7
-Pour la suite de ce tutorat, il vous faut créer un compte github : \url{https://github.com/}.
-Vous pouvez aussi vous intéresser à gitlab : \url{https://about.gitlab.com/}
+Pour la suite de ce tutorat, il vous faut cr\'eer un compte github : \url{https://github.com/}.
+Vous pouvez aussi vous int\'eresser \`a gitlab : \url{https://about.gitlab.com/}
 
 \chapter{Manipulation basique de git}
   \section{D\'ebut du projet}
@@ -99,19 +87,19 @@ Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creati
 \end{itemize}
 
     \subsection{R\'ecup\'erer un d\'ep\^ot existant}
-Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette addresse sur la page du d\'ep\^ot sur github, sous le nom \emph{HTTPS clone URL}.\\
+Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette adresse sur la page du d\'ep\^ot sur github, sous le nom \emph{HTTPS clone URL}.\\
 
-il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot, et effectuer la commande \verb|git clone <URL>|.\\
+il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot et effectuer la commande \verb|git clone <URL>|.\\
 Ainsi, pour notre exemple~: \verb|git clone https://github.com/C2R1/Tutorats.git|.
 
     \subsection{README}
-Le README est un fichier de présentation du projet. Généralement, on y décrit son installation, les fonctionnalités à venir, comment contribuer, la licence, ...
+Le README est un fichier de pr\'esentation du projet. G\'en\'eralement, on y d\'ecrit son installation, les fonctionnalit\'es \`a venir, comment contribuer, sa licence, ...
   \section{Premier commit}
-Une fois que l'on a le d\'ep\^ot clon\'e sur son ordinateur, on peut commencer \`a coder. Cependant, les modifications ne se font pas en temps r\'eel sur le serveur. Ainsi, il faut connaitre quelques commandes pour r\'ecup\'erer les modifications faites par les autres d\'eveloppeurs, et pouvoir leur envoyer nos modifications.
+Une fois que l'on a le d\'ep\^ot cl\^on\'e sur son ordinateur, on peut commencer \`a coder. Cependant, les modifications ne se font pas en temps r\'eel sur le serveur. Ainsi, il faut connaitre quelques commandes pour r\'ecup\'erer les modifications faites par les autres d\'eveloppeurs et pouvoir leur envoyer nos modifications.
      \subsection{R\'ecup\'erer les modifications depuis le serveur}
 Pour r\'ecup\'erer les modifications, il faut utiliser la commande \verb|git pull|.
      \subsection{Envoyer les modifications vers le serveur}
-Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git les fichiers qui ont \'et\'es ajout\'es depuis la derni\`ere modification. Ceci se fait avec la commande \verb|git add <fichiers>|. Par exemple, pour ajouter tous les nouveaux fichiers, on peut utiliser \verb|git add *|.\\
+Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git les fichiers qui ont \'et\'e ajout\'e depuis la derni\`ere modification. Ceci se fait avec la commande \verb|git add <fichiers>|. Par exemple, pour ajouter tous les nouveaux fichiers, on peut utiliser \verb|git add *|.\\
 
 Ensuite, il faut ``enregistrer'' les modifications localement. On dit alors qu'on \emph{commit} les changements. La commande est donc \verb|git commit <fichiers>|, en sp\'ecifiant les fichier \`a \emph{commit}. Pour enregistrer les modifications de tous les fichiers, on utilise l'option \verb|-a| (pour \emph{all}), et ainsi~: \verb|git commit -a|.\\
 Durant un commit, il faut expliquer les changements effectu\'es. C'est l'utilit\'e du \emph{commit message}. On peut sp\'ecifier ce message en utilisant l'option \verb|-m <message>|. soit~: \verb|git commit -m <message>|.\\
@@ -135,7 +123,7 @@ Soit~:
 
 
      \subsection{diff/ignore}
-Pour obtenir tous les changements effectués depuis le dernier commit. Voici la forme d'un fichier diff :
+Pour obtenir tous les changements effectu\'es depuis le dernier commit. Voici la forme d'un fichier diff :
 \begin{verbatim}
      diff --git a/apps/system/js/sound_manager.js b/apps/system/js/sound_manager.js
 index b796d13..3847b93 100644
@@ -155,12 +143,11 @@ index b796d13..3847b93 100644
      SettingsListener.getSettingsLock().set({
        'vibration.enabled': enabled
 \end{verbatim}   
-Note : On peut aussi obtenir la différence entre 2 commits avec cette commande. \\
-On y trouve donc le numéro du commit, les fichiers modifiés, les lignes supprimées ainsi que les lignes ajoutées.
-  \section{Historique}
-\chapter{Manipulation avancée}
+Note : On peut aussi obtenir la diff\'erence entre 2 commits avec cette commande. \\
+On y trouve donc le num\'ero du commit, les fichiers modifi\'es, les lignes supprim\'ees ainsi que les lignes ajout\'ees.
+\chapter{Manipulation avanc\'ee}
 	\section{Plus d'informations sur le fonctionnement de git}
-	Quand vous commitez avec git, git enregistre un objet qui contient un pointeur vers vos changements, l'auteur, le message de commit et un lien vers zéro parent si c'est le commit initial, 1 parent pour un commit classique, plus pour un commit résultant d'un merge entre 2 ou plusieurs branches.
+	Quand vous commitez avec git, git enregistre un objet qui contient un pointeur vers vos changements, l'auteur, le message de commit et un lien vers z\'ero parent si c'est le commit initial, 1 parent pour un commit classique, plus pour un commit r\'esultant d'un merge entre 2 ou plusieurs branches.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.3]{images/objetcommit}
@@ -168,18 +155,18 @@ On y trouve donc le numéro du commit, les fichiers modifiés, les lignes suppri
     \label{obCommit}
   \end{center}
 \end{figure}
-	Un projet sera donc représenté par une suite de ces objets. Avec un pointeur nommé HEAD représentant l'endroit ou l'utilisateur se trouve.
+	Un projet sera donc repr\'esent\'e par une suite de ces objets. Avec un pointeur nomm\'e HEAD repr\'esentant l'endroit o\`u l'utilisateur se trouve.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.3]{images/git}
-    \caption{Représentation d'un git}
+    \caption{Repr\'esentation d'un git}
     \label{obgit}
   \end{center}
 \end{figure}
 
-  \section{branch}
-     \subsection{créer sa branche}
-     Pour créer une branche (et plus généralement pour gérer des branches) il suffit d'utiliser la commande \verb|git branch|. Une autre méthode plus rapide et d'utiliser \verb|git checkout -b <nom de la branche>| qui va se charger de créer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser \verb|git checkout <nom de la branche>| :
+  \section{Les branches}
+     \subsection{Cr\'eer sa branche}
+     Pour cr\'eer une branche (et plus g\'en\'eralement pour g\'erer des branches) il suffit d'utiliser la commande \verb|git branch|. Une autre m\'ethode plus rapide et d'utiliser \verb|git checkout -b <nom de la branche>| qui va se charger de cr\'eer la branche et de se placer dessus. Pour se placer sur une branche qui existe, il faut utiliser \verb|git checkout <nom de la branche>| :
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.3]{images/prebranch}
@@ -197,9 +184,9 @@ On y trouve donc le numéro du commit, les fichiers modifiés, les lignes suppri
     \label{obpostbranch}
   \end{center}
 \end{figure}
-     \subsection{fusionner}
+     \subsection{Fusionner}
      Pour fusionner deux branches, il faut utiliser \verb|git merge|.
-     Exemple : On veut écraser une branche par une autre.\\
+     Exemple : On veut \'ecraser une branche par une autre.\\
      1/ On se place dans le repository. Ici, il contient un dossier git et un fichier README.md
 \begin{verbatim}
      >> ls
@@ -228,7 +215,7 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
 
     Initial commit
 \end{verbatim}
-    3/ On se place sur le commit. Et on créer une branche (ici on la nomme delta).
+    3/ On se place sur le commit. Et on cr\'e\'e une branche (ici on la nomme delta).
  \begin{verbatim}
 >> git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b
 >> git checkout -b delta
@@ -244,7 +231,7 @@ Basculement sur la nouvelle branche 'delta'
     \label{3exp}
   \end{center}
 \end{figure}
-    4/ On effectue quelques modifications et on les commit
+    4/ On effectue quelques modifications et on commit
 \begin{verbatim}
 >> echo someDiff > README.md 
 >> git commit README.md -m "exemple"
@@ -258,11 +245,7 @@ Basculement sur la nouvelle branche 'delta'
     \label{4exp}
   \end{center}
 \end{figure}
-    5/ Sur la branche qu'on souhaite garder on merge master avec une stratégie dite ours (ours
-           This resolves any number of heads, but the resulting tree of the merge is always that of the current branch head, effectively ignoring
-           all changes from all other branches. It is meant to be used to supersede old development history of side branches. Note that this is
-           different from the -Xours option to the recursive merge strategy.
-)
+    5/ Sur la branche qu'on souhaite garder on merge master avec une strat\'egie ("ours" ici. Note : prononc\'e \`a l'anglaise, pas comme l'animal...)
 \begin{verbatim}
 >> git merge -s ours master -m "ours attack"
 Merge made by the 'ours' strategy.
@@ -274,11 +257,11 @@ Merge made by the 'ours' strategy.
     \label{5exp}
   \end{center}
 \end{figure}
-    6/ On se place sur la branche que l'on souhaite écraser (master ici). 
+    6/ On se place sur la branche que l'on souhaite \'ecraser (master ici). 
 \begin{verbatim}
 >> git checkout master
 Basculement sur la branche 'master'
-Votre branche est à jour avec 'origin/master'.
+Votre branche est \`a jour avec 'origin/master'.
 \end{verbatim}
     7/ Et on merge delta sur master
 \begin{verbatim}
@@ -292,7 +275,7 @@ Message des modifications
     \label{6exp}
   \end{center}
 \end{figure}
-    8/ Et voilà, delta a écrasé master.
+    8/ Et voil\`a, delta a \'ecras\'e master.
 \begin{verbatim}
 >> ls
 README.md
@@ -300,22 +283,24 @@ README.md
 
 
      \subsection{R\'esoudre un conflit}
-     Un conflit git se présente de la forme :
+     Un conflit git se pr\'esente de la forme :
 \begin{verbatim}
 <<<<<<< HEAD
     partie du code de votre version locale
 =======
-    code présent sur master
+    code pr\'esent sur master
 >>>>>>> master
 \end{verbatim}
-		Il suffit alors d'éditer le code pour qu'il redevienne à nouveau fonctionnel.'
+		Il suffit alors d'\'editer le code pour qu'il redevienne \`a nouveau fonctionnel.
      \subsection{git log}
-     Pour savoir qui a fait quoi, il suffit de faire git log. On a alors accès à l'historique. un commit se présente de la forme : 
-     "commit \no commit
+     Pour savoir qui a fait quoi, il suffit de faire git log. On a alors acc\`es \`a l'historique. Un commit se pr\'esente de la forme : 
+\begin{verbatim}
+commit \no commit
 Author: Auteur <mail>
 Date:   Date
 
-    message du commit"
+    message du commit
+\end{verbatim}
   \section{Supprimer un commit}
   Pour supprimer un commit, il suffit de faire git revert \no du commit.
 Exemple :
@@ -325,7 +310,7 @@ Exemple :
 Author: AmarOk1412 <amarok@enconn.fr>
 Date:   Tue Sep 30 09:26:40 2014 +0200
 
-    paragraph git diff + readme + Contribuer à un autre repo
+    paragraph git diff + readme + Contribuer \`a un autre repo
 
 commit 616b3c6843e6aaa42bcf3a6f680760d94dcee57d
 Author: TheMrNomis <n0m1s@homnomnom.fr>
@@ -352,18 +337,20 @@ Date:   Mon Sep 29 22:45:53 2014 +0200
     Initial commit
 "
 \end{verbatim}
-\verb|git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b| va donc nous supprimer le fichier README qui a été créé pendant ce commit.
+\verb|git revert f1b4c0ebf59da0af7d782303f52bdae86c3d257b| va donc nous supprimer le fichier README qui a \'et\'e cr\'e\'e pendant ce commit.
   \section{Se positionner sur un commit}
-  Pour se placer à un état précis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (\verb|git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b| par exemple) pour se placer sur un commit précis.
-  \section{Contribuer à un autre repository}
-Généralement, il y a deux possibilités : 
-* Contribuer sans coder, (graphisme, traduction, communication, ouverture de bugs)
-* Coder
-L'ouverture d'issues nécessite de regarder un minimum si l'issue n'a pas déjà été ouverte, de détailler son probleme et de bien regarder la version qu'on utilise.
-Pour programmer, il faut forker le dépot et le récupérer en local.
-Puis il suffit de créer sa branche, de réaliser les modifications nécessaires.
-Quelques fois, il est demandé de créer des tests pour son bout de code.
-Avant de proposer il faut vérifier son code (norme, lisibilité, ...)
-Enfin il faut push votre travail sur votre fork et effectuer une pull request.
-La suite dépend du fonctionnement du projet.
+  Pour se placer \`a un \'etat pr\'ecis, on utilise la commande git checkout comme pour se placer sur une branche. Il faut donc faire git checkout \no du commit (\verb|git checkout f1b4c0ebf59da0af7d782303f52bdae86c3d257b| par exemple).
+  \section{Contribuer \`a un autre repository}
+G\'en\'eralement, il y a deux possibilit\'es : 
+\begin{itemize}
+\item Contribuer sans coder (graphisme, traduction, communication, ouverture de bugs)
+\item Coder
+\end{itemize}
+L'ouverture d'issues n\'ecessite de regarder un minimum si l'issue n'a pas d\'ej\`a \'et\'e ouverte, de d\'etailler son probl\`eme et de bien regarder la version qu'on utilise.\\
+Pour programmer, il faut forker le d\'ep\^ot et le r\'ecup\'erer en local.
+Puis il suffit de cr\'eer sa branche, de r\'ealiser les modifications n\'ecessaires.
+Quelques fois, il est demand\'e de cr\'eer des tests pour son bout de code.
+Avant de proposer il faut v\'erifier son code (norme, lisibilit\'e, ...)
+Enfin il faut push votre travail sur votre fork et effectuer une pull request.\\
+La suite d\'epend du fonctionnement du projet.
 \end{document}
