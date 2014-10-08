@@ -1,6 +1,6 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Histoire}{2}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Versionnage de code?}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Versionnage de code ?}{2}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Outils de versionnage}{2}{subsection.1.1.2}
 \contentsline {subsubsection}{SVN (subversion)}{2}{section*.2}
 \contentsline {subsubsection}{Mercurial}{2}{section*.3}

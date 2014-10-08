@@ -41,8 +41,8 @@
 
 \chapter{Introduction}
   \section{Histoire}
-    \subsection{Versionnage de code?}
-Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finie.
+    \subsection{Versionnage de code ?}
+Lorsqu'on travaille \`a plusieurs sur un projet, il est fr\'equent de devoir travailler au m\^eme moment. C'est ce \`a quoi servent les gestionnaires de version. Ils permettent \`a chaque d\'eveloppeur de travailler localement, puis de l'envoyer aux autres d\'eveloppeurs une fois leurs modifications finies.
     \subsection{Outils de versionnage}
 Il existe de nombreux outils de versionnage de code. Les 3 plus connus sont sans doute Git, Mercurial et SVN.
       \subsubsection{SVN (subversion)}
@@ -50,11 +50,11 @@ Ce fut le plus utilis\'e pendant longtemps. D\'evelopp\'e par la fondation Apach
       \subsubsection{Mercurial}
 Contrairement \`a SVN, il s'agit d'un syst\`eme d\'ecentralis\'e. Chacun poss\`ede son propre \emph{repository} et publie son code sur le \emph{repository} public. Une autre diff\'erence avec SVN est qu'il utilise la notion de changeset. C'est-\`a-dire qu'il pr\'ef\`ere garder en m\'emoire les changements appliqu\'es que les versions des fichiers. Il est utilis\'e notamment par Mozilla (Firefox, Thunderbird, ...), Facebook, et Adblock plus.
       \subsubsection{Git}
-Git poss\`ede tr\`es peu de diff\'erences avec Mercurial, mais l'histoire a fait qu'il c'est plus impos\'e.
+Git poss\`ede tr\`es peu de diff\'erences avec Mercurial, mais l'histoire a fait qu'il s'est plus impos\'e.
 C'est en partie grâce \`a Linus Torvalds qui en a fait la pub et des projets comme github que nous allons utiliser dans le reste du tutorat.
-C'est le gestionnaire de version utilis\'e par l'\'equipe de d\'eveloppeurs du noyeau linux.\\
+C'est le gestionnaire de version utilis\'e par l'\'equipe de d\'eveloppeurs du noyau linux.\\
 
-Pour plus d'informations sur les diff\'erences entre mercurial et Git, vous pouvez vous r\'ef\'erer \`a ces articles~: \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
+Pour plus d'informations sur les diff\'erences entre Mercurial et Git, vous pouvez vous r\'ef\'erer \`a ces articles~: \url{http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/}, \url{http://www.rockstarprogrammer.org/post/2008/apr/06/differences-between-mercurial-and-git/}.
   \section{Installation du client git}
     \subsection{Windows}
 Lancez le programme que vous pouvez trouver sur cette page : \url{http://msysgit.github.io} ou \url{http://www.git-scm.com/}
@@ -88,7 +88,7 @@ Nous avons alors un formulaire de cr\'eation de d\'ep\^ot (cf figure \ref{creati
     \subsection{R\'ecup\'erer un d\'ep\^ot existant}
 Pour r\'ecup\'erer un d\'ep\^ot existant, il faut connaitre l'\emph{url} du d\'ep\^ot. Par exemple \url{https://github.com/C2R1/Tutorats.git}. Vous trouverez cette adresse sur la page du d\'ep\^ot sur github, sous le nom \emph{HTTPS clone URL}.\\
 
-il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot et effectuer la commande \verb|git clone <URL>|.\\
+Il faut alors aller dans le dossier o\`u l'on veut cloner le d\'ep\^ot et effectuer la commande \verb|git clone <URL>|.\\
 Ainsi, pour notre exemple~: \verb|git clone https://github.com/C2R1/Tutorats.git|.
 
     \subsection{README}
@@ -98,7 +98,7 @@ Une fois que l'on a le d\'ep\^ot cl\^on\'e sur son ordinateur, on peut commencer
      \subsection{R\'ecup\'erer les modifications depuis le serveur}
 Pour r\'ecup\'erer les modifications, il faut utiliser la commande \verb|git pull|.
      \subsection{Envoyer les modifications vers le serveur}
-Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git les fichiers qui ont \'et\'e ajout\'e depuis la derni\`ere modification. Ceci se fait avec la commande \verb|git add <fichiers>|. Par exemple, pour ajouter tous les nouveaux fichiers, on peut utiliser \verb|git add *|.\\
+Pour envoyer les modifications au serveur, il faut tout d'abord dire \`a git les fichiers qui ont \'et\'e ajout\'es depuis la derni\`ere modification. Ceci se fait avec la commande \verb|git add <fichiers>|. Par exemple, pour ajouter tous les nouveaux fichiers, on peut utiliser \verb|git add *|.\\
 
 Ensuite, il faut ``enregistrer'' les modifications localement. On dit alors qu'on \emph{commit} les changements. La commande est donc \verb|git commit <fichiers>|, en sp\'ecifiant les fichier \`a \emph{commit}. Pour enregistrer les modifications de tous les fichiers, on utilise l'option \verb|-a| (pour \emph{all}), et ainsi~: \verb|git commit -a|.\\
 Durant un commit, il faut expliquer les changements effectu\'es. C'est l'utilit\'e du \emph{commit message}. On peut sp\'ecifier ce message en utilisant l'option \verb|-m <message>|. soit~: \verb|git commit -m <message>|.\\
